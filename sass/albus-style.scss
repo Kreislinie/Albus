@@ -1,19 +1,12 @@
 /* =============================================================
-  TABLE OF CONTENTS:
-  - Site
-    - Layout
-      - Admin Bar
-  - Variables
-    - Colors
-    - Elements
-
+  Albus Admin master stylesheet
 ==============================================================*/
 
-@import "variables/variables";
+@import 'variables';
 
-@import "colors/colors";
+@import 'colors/colors';
 
-@import "site/site";
+@import 'admin-menu';
 
 
 

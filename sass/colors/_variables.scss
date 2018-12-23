@@ -1,12 +1,9 @@
-// assign default value to all undefined variables
-
-
 // core variables
 
 $text-color: rgb(58, 56, 56);
 $base-color: rgb(255, 255, 255);
-$icon-color: darken( $base-color, 45% );
-$highlight-color: rgb(218, 218, 218);
+$icon-color: darken( $base-color, 65% );
+$highlight-color: rgb(236, 239, 243);
 $notification-color: rgb(213, 78, 33);
 
 
@@ -14,10 +11,10 @@ $notification-color: rgb(213, 78, 33);
 
 $body-background: rgb(255, 255, 255);
 
-$link: rgb(0, 115, 170);
-$link-focus: lighten( $link, 10% );
+$link: darken( $base-color, 80% );
+$link-focus: rgb(0, 137, 172);
 
-$button-color: $highlight-color;
+$button-color: $link-focus;
 $form-checked: $highlight-color;
 
 
@@ -36,10 +33,10 @@ $menu-current-icon: $menu-highlight-text;
 $menu-current-background: $menu-highlight-background;
 
 $menu-submenu-text: mix( $base-color, $text-color, 30% );
-$menu-submenu-background: darken( $base-color, 7% );
-$menu-submenu-background-alt: desaturate( lighten( $menu-background, 7% ), 7% );
+$menu-submenu-background: $highlight-color;
+$menu-submenu-background-alt: $highlight-color;
 
-$menu-submenu-focus-text: $highlight-color;
+$menu-submenu-focus-text: $link-focus;
 $menu-submenu-current-text: $text-color;
 
 $menu-bubble-text: $text-color;
