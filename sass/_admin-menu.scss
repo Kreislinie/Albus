@@ -1,19 +1,146 @@
 /*--------------------------------------------------------------
-  Left admin menu
+  Admin menu (left)
 --------------------------------------------------------------*/
 
-#adminmenuback {
-  border-right: $default-border;
+// Variables
+$admin-menu-width: 240px; // width of admin menu
+
+// hide submenu popup
+#adminmenu li.wp-not-current-submenu a.menu-top:focus + .wp-submenu,
+.js #adminmenu li.wp-not-current-submenu.opensub .wp-submenu,
+.js #adminmenu .sub-open,
+.no-js li.wp-has-submenu:hover .wp-submenu {
+  top: -1000em; 
 }
 
-// add space to menu name
-div.wp-menu-image:before,
-#adminmenu div.wp-menu-name {
-  padding: 10px 0;
+// admin menu width an color
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+  width: $admin-menu-width;
+  background: $base-color;
+}
+
+#adminmenuwrap {
+  
+  // add left spacing to menu points
+  ul#adminmenu {
+    padding: 0 30px;
+    box-sizing: border-box; 
+
+    // push menu points down
+    li:first-child > a {
+      padding-top: 30px; 
+    }
+
+    // not selectet menu points
+    > li {
+      opacity: 0.5; 
+
+      // menu point font styling
+      > a {
+        font-weight: bold;
+        font-size: 0.95em;
+        text-transform: uppercase;
+        letter-spacing: 1px; 
+      }
+
+      // opacity hover and select menu point
+      &.current, 
+      &.wp-has-current-submenu, 
+      &:hover, 
+      &:focus {
+        opacity: 1; 
+      }
+
+    }
+  
+    // icon color on hover and select
+    > li.current .wp-menu-image:before, 
+    > li.wp-has-current-submenu .wp-menu-image:before, 
+    > li:hover .wp-menu-image:before, 
+    > li:focus .wp-menu-image:before 
+    {
+      transition: all 0s;
+      color: $link-focus; 
+    }
+
+    // submenu position (padding)
+    li.wp-has-submenu ul.wp-submenu {
+      width: auto ;
+      padding: 5px 0px 19px 25px;
+      background: transparent; 
+    }
+
+    // submenu transparent background
+    li.menu-top:hover,
+    li.opensub > a.menu-top,
+    > a.menu-top:focus {
+      background-color: transparent; 
+    }
+
+    // menu separator
+    li.wp-menu-separator {
+      height: 15px; 
+    }
+
+  } // ul#adminmenu
+
+} // #adminmenuwrap
+
+
+// collapse menu button
+#collapse-menu span,
+#collapse-menu #collapse-button div:after {
+  opacity: 0.4;
+}
+
+// collapse menu button hover
+#collapse-menu:hover span,
+#collapse-menu:hover #collapse-button div:after {
+  opacity: 1;
+  color: $link-focus; 
+}
+
+// collapsed menu
+body.folded #adminmenuwrap #adminmenu {
+  padding: 0; 
+
+  // collapsed menu icon color
+  li.current a .wp-menu-image:before, 
+  li.wp-has-current-submenu a .wp-menu-image:before {
+    color: $link-focus; 
+  }
+
+  // collapsed menu submenu
+  li.wp-has-submenu ul.wp-submenu {
+    padding-left: 0;
+    box-shadow: none;
+    background: $base-color; 
+  }
+
+  .opensub .wp-submenu,
+  .wp-has-current-submenu .wp-submenu.sub-open,
+  .wp-has-current-submenu a.menu-top:focus + .wp-submenu,
+  .wp-has-current-submenu.opensub .wp-submenu,
+  .wp-submenu.sub-open,
+  a.menu-top:focus + .wp-submenu,
+  .wp-has-submenu:hover .wp-submenu {
+    top: 0px;
+    left: 36px; // collapsed menu width 
+  }
+
+  // collapsed menu submenu head
+  li.wp-has-submenu ul.wp-submenu .wp-submenu-head {
+    margin: 0;
+    font-weight: bold;
+    background-color: transparent; 
+  }
+
 }
 
 /*--------------------------------------------------------------
-  Top admin bar
+  Admin bar (top)
 --------------------------------------------------------------*/
 
 // Variables
@@ -55,4 +182,8 @@ html.wp-toolbar {
     line-height: $admin-bar-height;
   }
 
+}
+
+#adminmenu>li.current>a.current:after {
+  border: none;
 }

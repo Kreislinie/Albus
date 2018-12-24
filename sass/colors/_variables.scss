@@ -1,15 +1,15 @@
 // core variables
 
-$text-color: rgb(58, 56, 56);
+$text-color: rgb(65, 65, 65);
 $base-color: rgb(255, 255, 255);
 $icon-color: darken( $base-color, 65% );
-$highlight-color: rgb(236, 239, 243);
+$highlight-color: rgb(238, 238, 238);
 $notification-color: rgb(213, 78, 33);
 
 
 // global
 
-$body-background: rgb(255, 255, 255);
+$body-background: rgb(245, 245, 245);
 
 $link: darken( $base-color, 80% );
 $link-focus: rgb(0, 137, 172);
@@ -22,7 +22,7 @@ $form-checked: $highlight-color;
 
 $menu-text: $text-color;
 $menu-icon: $icon-color;
-$menu-background: $body-background;
+$menu-background: $base-color;
 
 $menu-highlight-text: $text-color;
 $menu-highlight-icon: $text-color;

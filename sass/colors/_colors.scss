@@ -120,7 +120,7 @@ input[type=radio]:checked:before {
 #adminmenu li.opensub > a.menu-top,
 #adminmenu li > a.menu-top:focus {
 	color: $menu-highlight-text;
-	background-color: $menu-highlight-background;
+	background-color: transparent;
 }
 
 #adminmenu li.menu-top:hover div.wp-menu-image:before,
@@ -141,16 +141,9 @@ input[type=radio]:checked:before {
 
 /* Admin Menu: submenu */
 
-#adminmenu .wp-submenu,
-#adminmenu .wp-has-current-submenu .wp-submenu,
-#adminmenu .wp-has-current-submenu.opensub .wp-submenu,
-.folded #adminmenu .wp-has-current-submenu .wp-submenu,
-#adminmenu a.wp-has-current-submenu:focus + .wp-submenu {
-	background: $menu-submenu-background;
-}
-
+// hide arrow
 #adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
-	border-right-color: $menu-submenu-background;
+  display: none;
 }
 
 #adminmenu .wp-submenu .wp-submenu-head {
@@ -182,9 +175,10 @@ input[type=radio]:checked:before {
 	}
 }
 
+// hide arrow
 ul#adminmenu a.wp-has-current-submenu:after,
 ul#adminmenu > li.current > a.current:after {
-    border-right-color: $body-background;
+  display: none;
 }
 
 #adminmenu li.current a.menu-top,
@@ -192,7 +186,7 @@ ul#adminmenu > li.current > a.current:after {
 #adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head,
 .folded #adminmenu li.current.menu-top {
 	color: $menu-current-text;
-	background: $menu-current-background;
+	background: transparent;
 }
 
 #adminmenu li.wp-has-current-submenu div.wp-menu-image:before,

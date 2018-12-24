@@ -3,7 +3,10 @@
 --------------------------------------------------------------*/
 
 // Border
-$default-border: 1px solid rgb(226, 228, 231);
+$default-border-color: rgb(226, 228, 231);
+$default-border: 1px solid $default-border-color;
+$default-border-radius: 5px;
+$default-border-active: 2px solid $link-focus;
 
 // Shadows
 $standard-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
