@@ -14,8 +14,10 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function load_custom_wp_admin_style() {
 
-  wp_register_style( 'custom_wp_admin_css', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '1.0.0' );
-  wp_enqueue_style( 'custom_wp_admin_css' );
+  wp_register_style( 'albus_style', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '1.0.0' );
+  wp_enqueue_style( 'albus_style' );
+
+  wp_enqueue_script('albus_script', plugin_dir_url( __FILE__ ) . 'js/albus-script.min.js', [], '1.0.0', true);
 
 }
 add_action('admin_enqueue_scripts', 'load_custom_wp_admin_style');

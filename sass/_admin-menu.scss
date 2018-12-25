@@ -4,6 +4,17 @@
 
 // Variables
 $admin-menu-width: 240px; // width of admin menu
+$content-margin: 50px;
+
+// place main content 
+#wpcontent, #wpfooter {
+  margin-left: $admin-menu-width;
+  padding-left: 50px;
+}
+
+.wrap {
+  margin-right: 50px;
+}
 
 // hide submenu popup
 #adminmenu li.wp-not-current-submenu a.menu-top:focus + .wp-submenu,
@@ -30,7 +41,7 @@ $admin-menu-width: 240px; // width of admin menu
 
     // push menu points down
     li:first-child > a {
-      padding-top: 30px; 
+      margin-top: 30px; 
     }
 
     // not selectet menu points

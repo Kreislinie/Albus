@@ -1,4 +1,6 @@
 *.css
+/js/albus-script.js
+/js/albus-script.min.js
 
 # NPM #
 ##########

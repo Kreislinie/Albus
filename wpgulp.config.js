@@ -29,16 +29,16 @@ module.exports = {
 	precision: 10,
 
 	// JS Vendor options.
-	jsVendorSRC: './assets/js/vendor/*.js', // Path to JS vendor folder.
-	jsVendorDestination: './assets/js/', // Path to place the compiled JS vendors file.
-	jsVendorDeployDestination: './dist/build/assets/js/', // Path to place the compiled JS vendors file for deployment builds.
+	jsVendorSRC: './vendor/js/*.js', // Path to JS vendor folder.
+	jsVendorDestination: './vendor/js/', // Path to place the compiled JS vendors file.
+	jsVendorDeployDestination: './dist/build/js/', // Path to place the compiled JS vendors file for deployment builds.
 	jsVendorFile: 'vendor', // Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
 
 	// JS Custom options.
-	jsCustomSRC: './assets/js/custom/*.js', // Path to JS custom scripts folder.
-	jsCustomDestination: './assets/js/', // Path to place the compiled JS custom scripts file.
-	jsCustomDeployDestination: './dist/build/assets/js/', // Path to place the compiled JS custom scripts file for deployment builds.
-	jsCustomFile: 'custom', // Compiled JS custom file name. Default set to custom i.e. custom.js.
+	jsCustomSRC: './js/custom/*.js', // Path to JS custom scripts folder.
+	jsCustomDestination: './js/', // Path to place the compiled JS custom scripts file.
+	jsCustomDeployDestination: './dist/build/js/', // Path to place the compiled JS custom scripts file for deployment builds.
+	jsCustomFile: 'albus-script', // Compiled JS custom file name. Default set to custom i.e. custom.js.
 
 	// Images options.
 	imgSRC: './assets/img/raw/**/*', // Source folder of images which should be optimized and watched. You can also specify types e.g. raw/**.{png,jpg,gif} in the glob.
@@ -48,7 +48,7 @@ module.exports = {
 	// Watch files paths.
 	watchStyles: './sass/**/*.scss', // Path to all *.scss files inside css folder and inside them.
 	watchJsVendor: './assets/js/vendor/*.js', // Path to all vendor JS files.
-	watchJsCustom: './assets/js/custom/*.js', // Path to all custom JS files.
+	watchJsCustom: './js/custom/*.js', // Path to all custom JS files.
 	watchPhp: './**/*.php', // Path to all PHP files.
 
 	// Translation options.
