@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
-  Lists and tables
---------------------------------------------------------------*/
+/* ============================================================
+  Lists and Tables
+============================================================ */
 
 // table styling
 table.wp-list-table.widefat {
@@ -8,7 +8,6 @@ table.wp-list-table.widefat {
   border: none;
   border-radius: $default-border-radius;
   box-shadow: $shadow-minimal;
-
 }
 
 // table rows padding
@@ -22,7 +21,7 @@ table.wp-list-table.widefat {
 }
 
 .striped>tbody>:nth-child(n), ul.striped>:nth-child(n) {
-  // remove background from every 2nd row
+  // reset background from every 2nd row
   background: inherit;
   
   // hover row styling

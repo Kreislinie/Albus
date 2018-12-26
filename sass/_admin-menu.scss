@@ -1,6 +1,17 @@
-/*--------------------------------------------------------------
-  Admin menu (left)
---------------------------------------------------------------*/
+/* ============================================================
+  Admin menu and top bar
+============================================================ */
+
+/* ============================================================
+  Table of Contents:
+  1.0 - Admin menu (left)
+  2.0 - Admin bar (top)
+============================================================ */
+
+
+/* ------------------------------------------------------------
+  1.0 - Admin menu (left)
+------------------------------------------------------------ */
 
 // Variables
 $admin-menu-width: 240px; // width of admin menu
@@ -33,6 +44,7 @@ $content-margin: 50px;
   margin-right: 50px;
 }
 
+
 // hide submenu popup
 #adminmenu li.wp-not-current-submenu a.menu-top:focus + .wp-submenu,
 .js #adminmenu li.wp-not-current-submenu.opensub .wp-submenu,
@@ -42,7 +54,7 @@ $content-margin: 50px;
 }
 
 #adminmenuback {
-  box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.33);
+  box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.33);
 }
 
 
@@ -57,9 +69,25 @@ $content-margin: 50px;
 
 #adminmenuwrap {
   
-
   #adminmenu {
     margin: 0;
+
+    // adjust submenu styles
+    li.opensub > a.menu-top,
+    li > a.menu-top:focus {
+      background-color: transparent;
+    }
+
+    li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
+      display: none;
+    }
+
+    #adminmenu li.current a.menu-top,
+    #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+    #adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head,
+    .folded #adminmenu li.current.menu-top {
+      background: transparent;
+    }
   }
 
   // add left spacing to menu points
@@ -70,6 +98,11 @@ $content-margin: 50px;
     // remove padding on auto collaps
     @media only screen and (max-width: 960px) {
       padding: 0;  
+    }
+
+    a.wp-has-current-submenu:after,
+    > li.current > a.current:after {
+      display: none;
     }
 
     // push menu points down
@@ -184,9 +217,9 @@ body.folded #adminmenuwrap #adminmenu {
 
 }
 
-/*--------------------------------------------------------------
-  Admin bar (top)
---------------------------------------------------------------*/
+/* ------------------------------------------------------------
+  2.0 - Admin bar (top)
+------------------------------------------------------------ */
 
 // Variables
 $admin-bar-height: 50px; // height of admin bar
@@ -261,6 +294,10 @@ html.wp-toolbar {
 body.folded #wpcontent #wpadminbar {
   left: 36px;
   width: calc(100% - 36px); 
+}
+
+.ab-item > img.avatar {
+  display: none;
 }
   
 

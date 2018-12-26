@@ -1,6 +1,4 @@
-@import 'variables';
-@import 'mixins';
-
+// needs cleanup...
 
 body {
 	background: $body-background;
@@ -46,9 +44,6 @@ input[type=radio]:checked:before {
 /* Core UI */
 
 .wp-core-ui {
-	.button-primary {
-		@include button( $button-color );
-	}
 
 	.wp-ui-primary {
 		color: $text-color;
@@ -232,15 +227,14 @@ ul#adminmenu > li.current > a.current:after {
 /* Admin Bar */
 
 #wpadminbar {
-	color: $menu-text;
-	background: $menu-background;
+	background: $base-color;
 }
 
 #wpadminbar .ab-item,
 #wpadminbar a.ab-item,
 #wpadminbar > #wp-toolbar span.ab-label,
 #wpadminbar > #wp-toolbar span.noticon {
-	color: $menu-text;
+  color: $text-color;
 }
 
 #wpadminbar .ab-icon,
@@ -256,7 +250,7 @@ ul#adminmenu > li.current > a.current:after {
 #wpadminbar.nojs .ab-top-menu > li.menupop:hover > .ab-item,
 #wpadminbar .ab-top-menu > li.menupop.hover > .ab-item {
 	color: $menu-submenu-focus-text;
-	background: $menu-submenu-background;
+	background: transparent;
 }
 
 #wpadminbar:not(.mobile) > #wp-toolbar li:hover span.ab-label,
@@ -276,7 +270,7 @@ ul#adminmenu > li.current > a.current:after {
 /* Admin Bar: submenu */
 
 #wpadminbar .menupop .ab-sub-wrapper {
-	background: $menu-submenu-background;
+	background: $base-color;
 }
 
 #wpadminbar .quicklinks .menupop ul.ab-sub-secondary,
@@ -314,7 +308,7 @@ ul#adminmenu > li.current > a.current:after {
 #wpadminbar li.hover .ab-item:before,
 #wpadminbar li:hover #adminbarsearch:before,
 #wpadminbar li #adminbarsearch.adminbar-focused:before {
-	color: $menu-submenu-focus-text;
+  color: $menu-submenu-focus-text;
 }
 
 #wpadminbar .quicklinks li a:hover .blavatar,
@@ -323,7 +317,7 @@ ul#adminmenu > li.current > a.current:after {
 #wpadminbar .menupop .menupop > .ab-item:hover:before,
 #wpadminbar.mobile .quicklinks .ab-icon:before,
 #wpadminbar.mobile .quicklinks .ab-item:before {
-	color: $menu-submenu-focus-text;
+  color: $menu-submenu-focus-text;
 }
 
 #wpadminbar.mobile .quicklinks .hover .ab-icon:before,
@@ -345,9 +339,9 @@ ul#adminmenu > li.current > a.current:after {
 
 /* Admin Bar: my account */
 
+// admin bar user photo
 #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {
-	border-color: $adminbar-avatar-frame;
-	background-color: $adminbar-avatar-frame;
+  display: none; // hide photo
 }
 
 #wpadminbar #wp-admin-bar-user-info .display-name {
