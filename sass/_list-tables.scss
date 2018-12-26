@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+  Lists and tables
+--------------------------------------------------------------*/
+
+// table styling
+table.wp-list-table.widefat {
+  margin: 20px 0px;
+  border: none;
+  border-radius: $default-border-radius;
+  box-shadow: $shadow-minimal;
+
+}
+
+// table rows padding
+.widefat td, 
+.widefat th,
+.updates-table tbody td.check-column, 
+.widefat tbody th.check-column, 
+.widefat tfoot td.check-column, 
+.widefat thead td.check-column {
+  padding: 18px 10px;
+}
+
+.striped>tbody>:nth-child(n), ul.striped>:nth-child(n) {
+  // remove background from every 2nd row
+  background: inherit;
+  
+  // hover row styling
+  &:hover {
+    background: lighten( $text-color, 72% );
+  }
+
+}
+
+// row border
+td, .check-column {
+border-bottom: $default-border;}
