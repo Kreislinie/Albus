@@ -12,6 +12,23 @@ $content-margin: 50px;
   padding-left: 50px;
 }
 
+// place gutenberg editor
+.auto-fold .edit-post-header {
+  left: $admin-menu-width;
+  top: 48px;
+}
+
+// place gutenberg editor sidebar
+.edit-post-sidebar {
+  // admin bar height + gutenber toolbar height
+  top: 48px + 56px;
+}
+
+// place gutenber editor toolbar
+.edit-post-header-toolbar {
+  padding-left: $content-margin - 9px;
+}
+
 .wrap {
   margin-right: 50px;
 }
@@ -24,24 +41,40 @@ $content-margin: 50px;
   top: -1000em; 
 }
 
+#adminmenuback {
+  box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.33);
+}
+
+
 // admin menu width an color
 #adminmenuback,
 #adminmenuwrap,
 #adminmenu {
   width: $admin-menu-width;
   background: $base-color;
+  z-index: 9999;
 }
 
 #adminmenuwrap {
   
+
+  #adminmenu {
+    margin: 0;
+  }
+
   // add left spacing to menu points
   ul#adminmenu {
     padding: 0 30px;
     box-sizing: border-box; 
 
+    // remove padding on auto collaps
+    @media only screen and (max-width: 960px) {
+      padding: 0;  
+    }
+
     // push menu points down
     li:first-child > a {
-      margin-top: 30px; 
+      margin-top: 0px; 
     }
 
     // not selectet menu points
@@ -62,6 +95,7 @@ $content-margin: 50px;
       &:hover, 
       &:focus {
         opacity: 1; 
+        background: transparent;
       }
 
     }
@@ -162,10 +196,34 @@ html.wp-toolbar {
   padding-top: $admin-bar-height;
 }
 
+// change position of top right options
+#screen-meta-links {
+  margin:0 50px 0 0;
+}
+
 #wpadminbar {
 
   height: $admin-bar-height;
   border-bottom: $default-border;
+  left: $admin-menu-width;
+  z-index: 9995;
+  width: calc(100% - #{$admin-menu-width});
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  border-bottom: $default-border; 
+
+  @media only screen and (max-width: 960px) {
+    // collapsed menu width + content margin
+    padding-left: 36px + $content-margin; 
+    left: 0;
+    width: 100%;
+  } 
+  
+  @media only screen and (max-width: 782px) {
+  padding-right: 0; 
+  }
+  
   
   // hide wordpress logo
   li#wp-admin-bar-wp-logo {
@@ -198,3 +256,18 @@ html.wp-toolbar {
 #adminmenu>li.current>a.current:after {
   border: none;
 }
+
+// adjust adminbar to collapsed admin menu
+body.folded #wpcontent #wpadminbar {
+  left: 36px;
+  width: calc(100% - 36px); 
+}
+  
+
+
+
+
+/*
+ * Responsiveness
+ */
+

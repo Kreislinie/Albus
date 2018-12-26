@@ -1,3 +1,3 @@
 /**
- * TODO: Open submenu on click without loading page
+ * TODO: Open submenu on click without jumping to page
  */
