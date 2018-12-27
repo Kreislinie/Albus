@@ -1,0 +1,7 @@
+// postbox styling
+.postbox,
+.welcome-panel {
+  border: none;
+  border-radius: $default-border-radius;
+  box-shadow: $shadow-minimal;
+}
