@@ -1,3 +1,4 @@
+/* all types
 input[type="text"],
 input[type="password"],
 input[type="checkbox"],
@@ -14,70 +15,46 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
+*/
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
 select,
 textarea {
-  border: $default-border;
-  border-radius: $default-border-radius;
+  border-top-left-radius: $default-border-radius;
+  border-top-right-radius: $default-border-radius;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  border-bottom: 2px solid $default-border-color;
 	box-shadow: none;
-	background-color: $base-color;
+	background-color: transparentize($base-color, 0.5);
 	color: #32373c;
-  outline: none;  
-}
+  outline: none; 
+  padding: 13px; 
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="color"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="email"]:focus,
-input[type="month"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="week"]:focus,
-select:focus,
-textarea:focus {
-  border: $default-border-active;
-  box-shadow: none;
-}
-
-#title-wrap #title,
-#description-wrap #content  {
-  // input field size
-  padding: 10px 16px;
-}
-
-
-#title-wrap #title-prompt-text,
-#description-wrap #content-prompt-text {
-  padding: 12px 13px;
-/*
-  // active field
-  &.screen-reader-text {
-    
-    // move placeholder to top-border
-    transform: translateY(-13px) scale(0.8);
-    transition: 0.2s transform ease-in-out;
+  &:hover {
     background-color: $base-color;
-  
-    // make placeholder visible
-    clip: unset;
-    clip-path: unset;
-    height: unset;
-    margin: unset;
-    width: unset;
-  
-    
-  } */
+  }
+
+  &:focus {
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: 2px solid $link-focus;
+    box-shadow: none;
+  }
 }
 
 
-
-
-
-
-
+.form-field label {
+  transform: translateY(35px);
+  padding-left: 13px;
+  font-size: 1.1em;
+}
