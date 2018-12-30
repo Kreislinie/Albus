@@ -26,15 +26,16 @@ input[type="week"],
   margin-bottom: 10px;
   border-bottom: 2px solid $default-border-color;
 	box-shadow: none;
-	background-color: transparentize($base-color, 0.5);
+	background-color: transparentize($base-color, 0);
   height: $default-button-height;
   appearance: none;
   padding: 0 39px 0 15px;
 
   // down arrow
-  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#{$default-border-color}' d='M18,8.2l-6,7l-6-7H18z'></path></svg>");
-  background-position: 93% 60%;
+  background-image: url("/wp-content/plugins/albus-admin/img/albus-admin-arrow.svg"); // FF does not support inline svg :(
+  background-position: 93% 59%;
   background-repeat: no-repeat;
+  background-size: 22px;
 
   &:hover {
     background-color: $base-color;

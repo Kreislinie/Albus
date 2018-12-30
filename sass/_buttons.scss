@@ -1,0 +1,24 @@
+// default button stylings
+.wp-core-ui .button, .wp-core-ui .button-primary, .wp-core-ui .button-secondary {
+  height: $default-button-height;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  background: $button-color;
+  color: $text-color;
+  padding: 0 18px 1px;
+
+  &:hover {
+    background: $link-focus;
+    color: white;
+  }
+
+}
+
+// page title button
+.wrap .page-title-action {
+  background: $link-focus;
+  border: none;
+  border-radius: $default-border-radius;
+  color: white;
+}
