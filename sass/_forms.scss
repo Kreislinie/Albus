@@ -84,10 +84,17 @@ textarea {
 }
 
 
+
+
 .form-field label {
   transform: translateY(35px);
   padding-left: 13px;
   font-size: 1.1em;
+}
+
+// search field
+.search-box input[type="search"] {
+  height: $default-button-height;
 }
 
 

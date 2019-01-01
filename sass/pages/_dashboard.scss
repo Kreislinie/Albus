@@ -5,3 +5,12 @@
   border-radius: $default-border-radius;
   box-shadow: $shadow-minimal;
 }
+
+.welcome-panel {
+  padding-bottom: 20px;
+}
+
+// quick press bottom space fix
+body #dashboard-widgets .postbox form .submit {
+  padding-bottom: 12px;
+}

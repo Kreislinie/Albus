@@ -2,12 +2,14 @@
 /*
 Plugin Name:  Albus Admin
 Plugin URI:   kreislinie.com/albus
-Description:  -
+Description:  Light WP Admin Theme
 Version:      0.0.1
 Author:       Simon Mettler
 Author URI:   kreislinie.com
 License:      GPL2
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  albus-admin
+Domain Path:  /languages
 */
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
@@ -27,5 +29,18 @@ function load_custom_wp_admin_style() {
 add_action('admin_enqueue_scripts', 'load_custom_wp_admin_style'); // backend
 add_action('admin_bar_init', 'load_custom_wp_admin_style'); // frontend (admin bar)
 
+
+/* ------------------------------------------------------------
+  2.0 - Add update functionality
+------------------------------------------------------------ */
+
+require 'vendors/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/Kreislinie/Albus/',
+	__FILE__,
+	'albus-admin'
+);
+
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
 ?>
