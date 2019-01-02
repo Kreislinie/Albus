@@ -3,7 +3,7 @@
 Plugin Name:  Albus Admin
 Plugin URI:   kreislinie.com/albus
 Description:  Backend theme based on the light and clean Gutenberg style.
-Version:      0.0.2
+Version:      v0.0.2
 Author:       Kreislinie - Simon Mettler
 Author URI:   kreislinie.com
 License:      GPL2

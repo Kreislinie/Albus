@@ -7,6 +7,6 @@ Albus Admin is a WordPress backend theme based on the light and clean Gutenberg 
 
 == Changelog ==
 
-= 0.0.2 =
+= v0.0.2 =
 * Testing update system
 * New build structure
