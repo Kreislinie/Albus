@@ -28,6 +28,12 @@ $admin-bar-height: 48px;
 div.edit-post-header {
   left: $admin-menu-width;
   top: $admin-bar-height;
+
+  @media (min-width: 960px) {
+    left: $admin-menu-width;
+    top: $admin-bar-height;
+  }
+
 }
 
 // place gutenberg editor sidebar

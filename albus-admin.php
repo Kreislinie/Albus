@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name:  Albus Admin
-Plugin URI:   kreislinie.com/albus
-Description:  Backend WP theme based on the light and clean Gutenberg style.
-Version:      v0.0.3
-Author:       Kreislinie - Simon Mettler
-Author URI:   kreislinie.com
-License:      GPLv3
-License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+Plugin Name:  Albus Admin 
+Plugin URI:   kreislinie.com/albus 
+Description:  Backend WP theme based on the light and clean Gutenberg style. 
+Version:      v0.0.4 
+Author:       Kreislinie - Simon Mettler 
+Author URI:   kreislinie.com 
+License:      GPLv3 
+License URI:  https://www.gnu.org/licenses/gpl-3.0.html 
 Text Domain:  albus-admin
 Domain Path:  /languages
 */
@@ -20,10 +20,10 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function load_custom_wp_admin_style() {
 
-  wp_register_style( 'albus_style', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '0.0.3' );
+  wp_register_style( 'albus_style', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '0.0.4' );
   wp_enqueue_style( 'albus_style' );
 
-  wp_enqueue_script('albus_script', plugin_dir_url( __FILE__ ) . 'js/custom.min.js', [], '0.0.3', true);
+  wp_enqueue_script('albus_script', plugin_dir_url( __FILE__ ) . 'js/custom.min.js', [], '0.0.4', true);
 
 }
 add_action('admin_enqueue_scripts', 'load_custom_wp_admin_style'); // backend
