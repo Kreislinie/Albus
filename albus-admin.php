@@ -2,12 +2,12 @@
 /*
 Plugin Name:  Albus Admin
 Plugin URI:   kreislinie.com/albus
-Description:  Backend theme based on the light and clean Gutenberg style.
+Description:  Backend WP theme based on the light and clean Gutenberg style.
 Version:      v0.0.3
 Author:       Kreislinie - Simon Mettler
 Author URI:   kreislinie.com
-License:      GPL2
-License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+License:      GPLv3
+License URI:  https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain:  albus-admin
 Domain Path:  /languages
 */
@@ -36,7 +36,7 @@ add_action('admin_bar_init', 'load_custom_wp_admin_style'); // frontend (admin b
 
 require 'vendors/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/Kreislinie/Albus/',
+	'https://github.com/Kreislinie/albus-admin/',
 	__FILE__,
 	'albus-admin'
 );

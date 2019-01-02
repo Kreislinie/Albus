@@ -14,8 +14,9 @@
 ------------------------------------------------------------ */
 
 // Variables
-$admin-menu-width: 240px; // width of admin menu
-$content-margin: 50px;
+$admin-menu-width: 240px;
+$content-margin: 50px; 
+$admin-bar-height: 48px;
 
 // place main content 
 #wpcontent, #wpfooter {
@@ -24,15 +25,15 @@ $content-margin: 50px;
 }
 
 // place gutenberg editor
-.auto-fold .edit-post-header {
+div.edit-post-header {
   left: $admin-menu-width;
-  top: 48px;
+  top: $admin-bar-height;
 }
 
 // place gutenberg editor sidebar
 .edit-post-sidebar {
   // admin bar height + gutenber toolbar height
-  top: 48px + 56px;
+  top: $admin-bar-height + 56px;
 }
 
 // place gutenber editor toolbar
