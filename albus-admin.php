@@ -3,7 +3,7 @@
 Plugin Name:  Albus Admin
 Plugin URI:   kreislinie.com/albus
 Description:  Backend theme based on the light and clean Gutenberg style.
-Version:      v0.0.2
+Version:      v0.0.3
 Author:       Kreislinie - Simon Mettler
 Author URI:   kreislinie.com
 License:      GPL2
@@ -20,10 +20,10 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function load_custom_wp_admin_style() {
 
-  wp_register_style( 'albus_style', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '0.0.2' );
+  wp_register_style( 'albus_style', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '0.0.3' );
   wp_enqueue_style( 'albus_style' );
 
-  wp_enqueue_script('albus_script', plugin_dir_url( __FILE__ ) . 'js/custom.min.js', [], '0.0.2', true);
+  wp_enqueue_script('albus_script', plugin_dir_url( __FILE__ ) . 'js/custom.min.js', [], '0.0.3', true);
 
 }
 add_action('admin_enqueue_scripts', 'load_custom_wp_admin_style'); // backend
