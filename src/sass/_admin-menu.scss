@@ -24,29 +24,6 @@ $admin-bar-height: 48px;
   padding-left: 50px;
 }
 
-// place gutenberg editor
-div.edit-post-header {
-  left: $admin-menu-width;
-  top: $admin-bar-height;
-
-  @media (min-width: 960px) {
-    left: $admin-menu-width;
-    top: $admin-bar-height;
-  }
-
-}
-
-// place gutenberg editor sidebar
-.edit-post-sidebar {
-  // admin bar height + gutenber toolbar height
-  top: $admin-bar-height + 56px;
-}
-
-// place gutenber editor toolbar
-.edit-post-header-toolbar {
-  padding-left: $content-margin - 9px;
-}
-
 .wrap {
 margin: 55px 20px 0 2px;
 }
