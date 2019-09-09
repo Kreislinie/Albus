@@ -1,0 +1,65 @@
+/* ============================================================
+  Media Library
+============================================================ */
+
+/* ============================================================
+  Table of Contents:
+  1.0 - Media Library Overview
+  2.0 - Attachment Details
+============================================================ */
+
+/* ------------------------------------------------------------
+  1.0 - Media Library Overview
+------------------------------------------------------------ */
+
+// Remove media toolbar default styling.
+.wp-filter {
+  border: none;
+  box-shadow: none;
+}
+
+// Center media toolbar elements.
+.media-frame.mode-grid .media-toolbar select,
+.media-frame.mode-grid.mode-edit .media-toolbar-secondary>.select-mode-toggle-button,
+.media-toolbar.wp-filter .view-switch {
+  margin-top: 10px;
+}
+
+// Attachement preview styling.
+.media-frame.mode-grid .attachment.details, 
+.media-frame.mode-grid .attachment, 
+.media-frame.mode-grid .selected.attachment {
+  
+  &:focus {
+    box-shadow: none;
+
+    .attachment-preview {
+      border: 2px solid $highlight-color;
+      box-shadow: $standard-shadow-hover;
+    }
+
+  }
+
+  &:hover .attachment-preview {
+    box-shadow: $standard-shadow;
+  }
+
+}
+
+// Allow overflow to prevent box-shadow cutoff.
+.media-frame .attachments-browser,
+.attachments-browser .attachments, 
+.attachments-browser .uploader-inline,
+.media-frame-content,
+#wp-media-grid,
+.media-frame {
+  overflow: visible;
+}
+
+/* ------------------------------------------------------------
+  2.0 - Attachment Details
+------------------------------------------------------------ */
+
+.edit-attachment-frame .attachment-info {
+  background: transparent;
+}

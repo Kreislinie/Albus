@@ -1,0 +1,47 @@
+/* ============================================================
+  Global
+============================================================ */
+
+// Place main content.
+html.wp-toolbar {
+  padding-top: $admin-bar-height;
+}
+
+#wpcontent,
+#wpfooter {
+  margin-left: $admin-menu-width;
+  padding-left: $content-margin;
+}
+
+@media only screen and (max-width: 960px) {
+
+  .auto-fold #wpcontent,
+	.auto-fold #wpfooter {
+		margin-left: $admin-menu-collapse-width;
+	}
+
+}
+
+// Adapt margin to folded admin menu.
+.folded #wpcontent,
+.folded #wpfooter {
+  margin-left: $admin-menu-collapse-width;
+}
+
+.wrap {
+  margin: 55px $content-margin 0 2px;
+}
+
+#screen-meta-links {
+  margin-right: $content-margin;
+}
+
+// Error and update messages.
+.notice-error, 
+div.error,
+div.updated {
+  border-top: $default-border;
+  border-right: $default-border;
+  border-bottom: $default-border;
+  box-shadow: none;
+}

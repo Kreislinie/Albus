@@ -30,6 +30,23 @@ add_action('admin_enqueue_scripts', 'load_custom_wp_admin_style'); // backend
 add_action('admin_bar_init', 'load_custom_wp_admin_style'); // frontend (admin bar)
 
 
+//fired before left side footer text is echoed.
+add_filter('admin_footer_text', 'my_footer_text');
+//fired before right side footer text is echoed. Third parameter is just a indication of a version number, its values doesn't make any other sense.
+add_filter('update_footer', 'my_footer_version', 11);
+ 
+//$default represents the existing text in the left side
+function my_footer_text($default) {
+    //return the new footer text
+    return '<a target="_blank" href="https://de.wordpress.com/">WordPress</a> & <a target="_blank" href="https://kreislinie.com/">Albus Admin</a>';
+}
+
+//$default represents the exisiting text in the right side
+function my_footer_version($default) {
+    //return the new footer text
+    return $default;
+}
+
 /* ------------------------------------------------------------
   2.0 - Add update functionality
 ------------------------------------------------------------ */
@@ -42,5 +59,6 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 );
 
 $myUpdateChecker->getVcsApi()->enableReleaseAssets();
+
 
 ?>

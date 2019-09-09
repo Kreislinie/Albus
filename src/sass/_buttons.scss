@@ -10,12 +10,23 @@
   color: $text-color;
   padding: 0 18px 1px;
   margin-right: 5px;
+  line-height: 40px;
 
   &:hover {
     background: $link-focus;
     color: white;
   }
 
+}
+
+// Center navigation button text.
+.tablenav .tablenav-pages .button, .tablenav .tablenav-pages .tablenav-pages-navspan {
+  line-height: 40px;
+}
+
+// Push table down (adds space for search field).
+.tablenav.top {
+  padding-top: 14px;
 }
 
 .wp-core-ui .button.button-primary.button-hero {
@@ -28,4 +39,8 @@
   border: none;
   border-radius: $default-border-radius;
   color: white;
+  &:hover {
+    background: $link-focus;
+    color: white;
+  }
 }

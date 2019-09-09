@@ -8,95 +8,113 @@
   2.0 - Admin bar (top)
 ============================================================ */
 
+// Variables
+$admin-menu-width: 220px;
+$admin-menu-collapse-width: 57px;
+$content-margin: 35px; 
+$admin-bar-height: 50px;
+
 
 /* ------------------------------------------------------------
   1.0 - Admin menu (left)
 ------------------------------------------------------------ */
 
-// Variables
-$admin-menu-width: 240px;
-$content-margin: 50px; 
-$admin-bar-height: 48px;
-
-// place main content 
-#wpcontent, #wpfooter {
-  margin-left: $admin-menu-width;
-  padding-left: 50px;
-}
-
-.wrap {
-margin: 55px 20px 0 2px;
-}
-
-
-// hide submenu popup
-#adminmenu li.wp-not-current-submenu a.menu-top:focus + .wp-submenu,
-.js #adminmenu li.wp-not-current-submenu.opensub .wp-submenu,
-.js #adminmenu .sub-open,
-.no-js li.wp-has-submenu:hover .wp-submenu {
-  top: -1000em; 
-}
-
+// Admin menu styling.
 #adminmenuback {
-  box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.33);
+  border-right: $default-border;
+  background: $base-color;
+  box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.33);
 }
 
+// Set position of submenu showed on hover.
+#adminmenu .wp-submenu {
+	top: -1000em;
+	left: $admin-menu-width - 15px;
+}
 
-// admin menu width an color
+// Set position of submenu within admin bar.
+#adminmenu .wp-has-current-submenu ul>li>a, 
+.folded #adminmenu li.menu-top .wp-submenu>li>a {
+  padding: 5px 0px 5px 37px;
+}
+
+// Admin menu width.
 #adminmenuback,
 #adminmenuwrap,
 #adminmenu {
   width: $admin-menu-width;
-  background: $base-color;
-  z-index: 9999;
+  z-index: 9998;
+}
+
+#adminmenu div.wp-menu-name {
+  width: $admin-menu-width - 15px;
+}
+
+// Auto folded admin menu.
+@media only screen and (max-width: 960px) {
+
+	.auto-fold #adminmenuback,
+	.auto-fold #adminmenuwrap,
+	.auto-fold #adminmenu,
+	.auto-fold #adminmenu li.menu-top {
+    width: $admin-menu-collapse-width;
+	}
+
+	.auto-fold #adminmenu .wp-submenu.sub-open,
+	.auto-fold #adminmenu .opensub .wp-submenu,
+	.auto-fold #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+	.auto-fold #adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+	.auto-fold #adminmenu a.menu-top:focus + .wp-submenu,
+	.auto-fold #adminmenu .wp-has-current-submenu a.menu-top:focus + .wp-submenu {
+		left: $admin-menu-collapse-width;
+  }
+  
+  // Icon padding.
+  .auto-fold #adminmenuwrap ul#adminmenu {
+    padding-left: 10px;
+  }
+
+}
+
+// Manually collapsed admin menu.
+.folded #adminmenuback,
+.folded #adminmenuwrap,
+.folded #adminmenu,
+.folded #adminmenu li.menu-top {
+  width: $admin-menu-collapse-width;
+}
+
+// Icon padding on manually collapsed menu.
+.folded #adminmenuwrap ul#adminmenu {
+  padding-left: 10px;
 }
 
 #adminmenuwrap {
-  
-  #adminmenu {
-    margin: 0;
 
-    // adjust submenu styles
-    li.opensub > a.menu-top,
-    li > a.menu-top:focus {
-      background-color: transparent;
-    }
-
-    li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
-      display: none;
-    }
-
-    #adminmenu li.current a.menu-top,
-    #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
-    #adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head,
-    .folded #adminmenu li.current.menu-top {
-      background: transparent;
-    }
-  }
-
-  // add left spacing to menu points
+  // Adds left spacing to menu items. 
   ul#adminmenu {
-    padding: 0 30px;
+    padding: 0 10px 0 25px;
     box-sizing: border-box; 
 
-    // remove padding on auto collaps
-    @media only screen and (max-width: 960px) {
-      padding: 0;  
-    }
 
+    // Hides current menu item arrow.
     a.wp-has-current-submenu:after,
     > li.current > a.current:after {
       display: none;
     }
 
-    // push menu points down
-    li:first-child > a {
-      margin-top: 0px; 
-    }
-
-    // not selectet menu points
+    // Opacity of not active menu points.
     > li {
-      opacity: 0.5; 
+      opacity: 0.6; 
+
+      // Opacity of active menu point.
+      &.current, 
+      &.wp-has-current-submenu, 
+      &:hover, 
+      &:focus {
+        opacity: 1; 
+        background: transparent;
+      }
 
       // menu point font styling
       > a {
@@ -104,15 +122,6 @@ margin: 55px 20px 0 2px;
         font-size: 0.95em;
         text-transform: uppercase;
         letter-spacing: 1px; 
-      }
-
-      // opacity hover and select menu point
-      &.current, 
-      &.wp-has-current-submenu, 
-      &:hover, 
-      &:focus {
-        opacity: 1; 
-        background: transparent;
       }
 
     }
@@ -127,31 +136,37 @@ margin: 55px 20px 0 2px;
       color: $link-focus; 
     }
 
-    // submenu position (padding)
+    // Submenu position (padding)
     li.wp-has-submenu ul.wp-submenu {
       width: auto ;
-      padding: 5px 0px 19px 25px;
-      background: transparent; 
+
     }
 
-    // submenu transparent background
-    li.menu-top:hover,
-    li.opensub > a.menu-top,
-    > a.menu-top:focus {
-      background-color: transparent; 
-    }
+  } 
 
-    // menu separator
-    li.wp-menu-separator {
-      height: 15px; 
-    }
+} 
 
-  } // ul#adminmenu
+.folded #adminmenu .wp-submenu.sub-open,
+.folded #adminmenu .opensub .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+.folded #adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+.folded #adminmenu a.menu-top:focus + .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu a.menu-top:focus + .wp-submenu,
+.no-js.folded #adminmenu .wp-has-submenu:hover .wp-submenu {
+  left: $admin-menu-collapse-width;
+  box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.33);
+}
 
-} // #adminmenuwrap
+// Open submenu arrow.
+#adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
+	border-right-color: $base-color;
+}
 
+#adminmenu .wp-submenu .wp-submenu-head {
+  font-weight: bold;
+}
 
-// collapse menu button
+// Collapse menu button
 #collapse-menu span,
 #collapse-menu #collapse-button div:after {
   opacity: 0.4;
@@ -164,105 +179,20 @@ margin: 55px 20px 0 2px;
   color: $link-focus; 
 }
 
-// collapsed menu
-body.folded #adminmenuwrap #adminmenu {
-  padding: 0; 
-
-  // collapsed menu icon color
-  li.current a .wp-menu-image:before, 
-  li.wp-has-current-submenu a .wp-menu-image:before {
-    color: $link-focus; 
-  }
-
-  // collapsed menu submenu
-  li.wp-has-submenu ul.wp-submenu {
-    padding-left: 0;
-    box-shadow: none;
-    background: $base-color; 
-  }
-
-  .opensub .wp-submenu,
-  .wp-has-current-submenu .wp-submenu.sub-open,
-  .wp-has-current-submenu a.menu-top:focus + .wp-submenu,
-  .wp-has-current-submenu.opensub .wp-submenu,
-  .wp-submenu.sub-open,
-  a.menu-top:focus + .wp-submenu,
-  .wp-has-submenu:hover .wp-submenu {
-    top: 0px;
-    left: 36px; // collapsed menu width 
-  }
-
-  // collapsed menu submenu head
-  li.wp-has-submenu ul.wp-submenu .wp-submenu-head {
-    margin: 0;
-    font-weight: bold;
-    background-color: transparent; 
-  }
-
-}
 
 /* ------------------------------------------------------------
   2.0 - Admin bar (top)
 ------------------------------------------------------------ */
 
-// Variables
-$admin-bar-height: 50px; // height of admin bar
-
-// push content down
-html.wp-toolbar {
-  padding-top: $admin-bar-height;
-}
-
-// change position of top right options
-#screen-meta-links {
-  margin:0 50px 0 0;
-}
-
+// Admin bar styling.
 #wpadminbar {
-
   height: $admin-bar-height;
+  padding: 0 $content-margin;
   border-bottom: $default-border;
-  left: $admin-menu-width;
-  z-index: 9995;
-  width: calc(100% - #{$admin-menu-width});
-  padding-left: 50px;
-  padding-right: 50px;
-  box-sizing: border-box;
-  border-bottom: $default-border; 
-
-  @media only screen and (max-width: 960px) {
-    // collapsed menu width + content margin
-    padding-left: 36px + $content-margin; 
-    left: 0;
-    width: 100%;
-  } 
-  
-  @media only screen and (max-width: 782px) {
-  padding-right: 0; 
-  }
-  
-  
-  // hide wordpress logo
-  li#wp-admin-bar-wp-logo {
-    display: none; 
-  }
-
-  // center icons
-  .ab-icon,
-  .ab-item:before,
-  > #wp-toolbar > #wp-admin-bar-root-default .ab-icon {
-    padding: $admin-bar-height/4 0;
-    font-size: 20px;
-  }
-
-
-  // font adjustments 
-  .ab-item, 
-  a.ab-item,
-  > #wp-toolbar span.ab-label,
-  > #wp-toolbar span.noticon {
-    height: $admin-bar-height;
-  }
+  box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.33);
+  left: unset;
+  right: 0;
+  z-index: 1;
 
   li a {
     line-height: $admin-bar-height;
@@ -270,25 +200,48 @@ html.wp-toolbar {
 
 }
 
-#adminmenu>li.current>a.current:after {
-  border: none;
+
+// Admin bar width.
+#wpwrap #wpadminbar {
+  width: calc( 100% - #{$admin-menu-width} - 2 * #{$content-margin} );
 }
 
-// adjust adminbar to collapsed admin menu
-body.folded #wpcontent #wpadminbar {
-  left: 36px;
-  width: calc(100% - 36px); 
+// Sets width if menu folded.
+// This possibly could work with less calculations...
+.folded #wpwrap #wpadminbar {
+  width: calc( 100% - #{$admin-menu-collapse-width} - 2 * #{$content-margin} );
 }
 
+.auto-fold #wpwrap #wpadminbar {
+
+  @media only screen and (max-width: 960px) {
+    width: calc( 100% - #{$admin-menu-collapse-width} - 2 * #{$content-margin} );
+  }
+
+  // Full width on mobile.
+  @media only screen and (max-width: 782px) {
+    width: 100%;
+  }
+  
+}
+
+
+// Sets admin bar item height.
+#wpadminbar .quicklinks .ab-empty-item, 
+#wpadminbar .quicklinks a, 
+#wpadminbar .shortlink-input {
+  height: $admin-bar-height;
+}
+
+// Adjust admin bar icons padding.
+#wpadminbar .ab-icon, 
+#wpadminbar .ab-item:before, 
+#wpadminbar>#wp-toolbar>#wp-admin-bar-root-default .ab-icon, 
+.wp-admin-bar-arrow {
+  padding-top: $admin-bar-height / 4;
+}
+
+// Hides avatar icon.
 .ab-item > img.avatar {
   display: none;
 }
-  
-
-
-
-
-/*
- * Responsiveness
- */
-

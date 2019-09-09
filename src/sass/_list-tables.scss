@@ -6,8 +6,8 @@
 table.wp-list-table.widefat {
   margin: 20px 0px;
   border: none;
-  border-radius: $default-border-radius;
-  box-shadow: $shadow-minimal;
+border: $default-border;
+
 }
 
 // table rows padding
@@ -34,3 +34,8 @@ table.wp-list-table.widefat {
 // row border
 td, .check-column {
 border-bottom: $default-border;}
+
+// table navigation container
+.tablenav {
+  height: $default-button-height;
+}

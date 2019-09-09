@@ -17,7 +17,7 @@
 $text-color: rgb(65, 65, 65);
 $base-color: rgb(255, 255, 255);
 $icon-color: darken( $base-color, 65% );
-$highlight-color: rgb(238, 238, 238);
+$highlight-color: rgb(0, 137, 172);
 $notification-color: rgb(213, 78, 33);
 
 
@@ -26,7 +26,7 @@ $body-background: rgb(245, 245, 245);
 $link: darken( $base-color, 80% );
 $link-focus: rgb(0, 137, 172);
 $button-color: rgb(228, 230, 230);
-$form-checked: $highlight-color;
+$form-checked: $link-focus;
 
 
 // admin menu & admin-bar colors
@@ -36,15 +36,15 @@ $menu-background: $base-color;
 
 $menu-highlight-text: $text-color;
 $menu-highlight-icon: $text-color;
-$menu-highlight-background: $highlight-color;
+$menu-highlight-background: rgba(0, 0, 0, 0);
 
 $menu-current-text: $menu-highlight-text;
 $menu-current-icon: $menu-highlight-text;
-$menu-current-background: $menu-highlight-background;
+$menu-current-background: rgba(0, 0, 0, 0);
 
 $menu-submenu-text: mix( $base-color, $text-color, 30% );
-$menu-submenu-background: $highlight-color;
-$menu-submenu-background-alt: $highlight-color;
+$menu-submenu-background: $base-color;
+$menu-submenu-background-alt: $base-color;
 
 $menu-submenu-focus-text: $link-focus;
 $menu-submenu-current-text: $text-color;
@@ -62,6 +62,11 @@ $menu-collapse-focus-icon: $menu-highlight-icon;
 $adminbar-avatar-frame: lighten( $menu-background, 7% );
 $adminbar-input-background: lighten( $menu-background, 7% );
 
+$adminbar-recovery-exit-text: $menu-bubble-text !default;
+$adminbar-recovery-exit-background: $menu-bubble-background !default;
+$adminbar-recovery-exit-background-alt: mix(black, $adminbar-recovery-exit-background, 10%) !default;
+
+
 $menu-customizer-text: mix( $base-color, $text-color, 40% );
 
 
@@ -70,7 +75,7 @@ $menu-customizer-text: mix( $base-color, $text-color, 40% );
 ------------------------------------------------------------ */
 
 // Border
-$default-border-color: rgb(226, 228, 231);
+$default-border-color: rgb(211, 211, 211);
 $default-border: 1px solid $default-border-color;
 $default-border-radius: 5px;
 $default-border-active: 2px solid $link-focus;

@@ -4,7 +4,7 @@
 
 @import 'variables';
 
-@import 'colors';
+@import 'colors/colors';
 
 @import 'buttons';
 
@@ -12,8 +12,9 @@
 
 @import 'forms';
 
-@import 'global-layout';
-
 @import 'list-tables';
 
 @import 'pages/pages';
+
+@import 'global';
+

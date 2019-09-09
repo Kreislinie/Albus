@@ -30,11 +30,12 @@ div.dashboard-widget-submit input:hover,
 /* Forms */
 
 input[type=checkbox]:checked:before {
-	color: $form-checked;
+  color: white;
+  margin: -4px 0 0 -5px;
 }
 
 input[type=radio]:checked:before {
-	background: $form-checked;
+  background: $form-checked;
 }
 
 .wp-core-ui input[type="reset"]:hover,
@@ -138,11 +139,6 @@ input[type=radio]:checked:before {
 
 /* Admin Menu: submenu */
 
-// hide arrow
-#adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
-  display: none;
-}
-
 #adminmenu .wp-submenu .wp-submenu-head {
 	color: $menu-submenu-text;
 }
@@ -172,11 +168,7 @@ input[type=radio]:checked:before {
 	}
 }
 
-// hide arrow
-ul#adminmenu a.wp-has-current-submenu:after,
-ul#adminmenu > li.current > a.current:after {
-  display: none;
-}
+
 
 #adminmenu li.current a.menu-top,
 #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
@@ -212,6 +204,23 @@ ul#adminmenu > li.current > a.current:after {
 #adminmenu li.menu-top:hover > a .update-plugins {
 	color: $menu-bubble-current-text;
 	background: $menu-bubble-current-background;
+}
+
+/* Admin Menu: submenu */
+
+
+#adminmenu .wp-has-current-submenu .wp-submenu, 
+#adminmenu .wp-has-current-submenu .wp-submenu.sub-open, 
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu, 
+#adminmenu a.wp-has-current-submenu:focus+.wp-submenu, 
+.no-js li.wp-has-current-submenu:hover .wp-submenu {
+  background-color: $base-color;
+}
+
+#adminmenu .wp-submenu, 
+.folded #adminmenu .wp-has-current-submenu .wp-submenu, 
+.folded #adminmenu a.wp-has-current-submenu:focus+.wp-submenu {
+  background-color: $base-color;
 }
 
 
@@ -471,12 +480,3 @@ div#wp-responsive-toggle a:before {
 	color: $menu-icon;
 }
 
-/* TinyMCE */
-
-.mce-container.mce-menu .mce-menu-item:hover,
-.mce-container.mce-menu .mce-menu-item.mce-selected,
-.mce-container.mce-menu .mce-menu-item:focus,
-.mce-container.mce-menu .mce-menu-item-normal.mce-active,
-.mce-container.mce-menu .mce-menu-item-preview.mce-active {
-	background: $highlight-color;
-}

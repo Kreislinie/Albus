@@ -1,32 +1,84 @@
-/* all types
-input[type="text"],
-input[type="password"],
-input[type="checkbox"],
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-*/
+.wp-admin {
+
+  input[type="text"],
+  input[type="password"],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+  textarea,
+  #titlediv #title { 
+    background-color: darken($base-color, 3%);
+    border-top-left-radius: $default-border-radius;
+    border-top-right-radius: $default-border-radius;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: 2px solid $default-border-color;
+    box-shadow: none;
+    color: #32373c;
+    outline: none; 
+    padding: 13px; 
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $link-focus;
+      border: transparent;
+      border-bottom: 2px solid $link-focus;
+      box-shadow: none;
+    }
+
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"] {
+    height: $default-button-height;
+  }
+
+}
+
+// Radio an d Checkbox.
+input[type=checkbox]:checked:before {
+  color: $base-color;
+  margin: -4px -6px;
+}
+
+// Disabled buttons.
+.wp-core-ui .button-primary[disabled], 
+.wp-core-ui .button-primary:disabled, 
+.wp-core-ui .button-primary.button-primary-disabled, 
+.wp-core-ui .button-primary.disabled {
+  color: rgb(212, 212, 212) !important;
+  background: rgb(255, 255, 255) !important;
+}
 
 // select dropdown
 .wp-admin select {
-  border-radius: 0;
-  border: none;
-  border-top-left-radius: $default-border-radius;
-  border-top-right-radius: $default-border-radius;
   margin-bottom: 10px;
-  border-bottom: 2px solid $default-border-color;
 	box-shadow: none;
-	background-color: transparentize($base-color, 0);
   height: $default-button-height;
   appearance: none;
   padding: 0 39px 0 15px;
@@ -36,16 +88,6 @@ input[type="week"],
   background-position: 93% 59%;
   background-repeat: no-repeat;
   background-size: 22px;
-
-  &:hover {
-    background-color: $base-color;
-  }
-
-  &:focus {
-    outline: none;
-    border-bottom: 2px solid $link-focus;
-  }
-
 }
 
 
@@ -58,21 +100,6 @@ input[type="tel"],
 input[type="text"],
 input[type="url"],
 textarea {
-  border-top-left-radius: $default-border-radius;
-  border-top-right-radius: $default-border-radius;
-  border-top: transparent;
-  border-right: transparent;
-  border-left: transparent;
-  border-bottom: 2px solid $default-border-color;
-	box-shadow: none;
-	background-color: transparentize($base-color, 0.5);
-	color: #32373c;
-  outline: none; 
-  padding: 13px; 
-
-  &:hover {
-    background-color: $base-color;
-  }
 
   &:focus {
     border-top: transparent;
@@ -80,15 +107,19 @@ textarea {
     border-left: transparent;
     border-bottom: 2px solid $link-focus;
     box-shadow: none;
+    background-color: darken($base-color, 6%);
   }
+
+  &:hover {
+    background-color: darken($base-color, 5%);
+  }
+
 }
 
 
 
 
 .form-field label {
-  transform: translateY(35px);
-  padding-left: 13px;
   font-size: 1.1em;
 }
 
@@ -99,13 +130,14 @@ textarea {
 
 
 input[type=checkbox] {
-  border-radius: $default-border-radius;
+  border-radius: 2px;
   border: 2px solid #6c7781;
   margin-right: 12px;
   transition: none;
   &:checked {
     background: #11a0d2;
     border-color: #11a0d2;
+    color: $base-color;
 
   }
 }
