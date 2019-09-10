@@ -2,8 +2,8 @@
 /*
 Plugin Name:  Albus Admin 
 Plugin URI:   kreislinie.com/albus 
-Description:  Backend WP theme based on the light and clean Gutenberg style. 
-Version:      v0.0.2 
+Description:  Light and clean WordPress backend theme. 
+Version:      v0.0.3 
 Author:       Kreislinie - Simon Mettler 
 Author URI:   kreislinie.com 
 License:      GPLv3 
