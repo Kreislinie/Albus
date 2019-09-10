@@ -58,7 +58,4 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'albus-admin'
 );
 
-$myUpdateChecker->getVcsApi()->enableReleaseAssets();
-
-
 ?>
