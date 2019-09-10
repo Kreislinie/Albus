@@ -3,13 +3,12 @@
 Plugin Name:  Albus Admin 
 Plugin URI:   kreislinie.com/albus 
 Description:  Backend WP theme based on the light and clean Gutenberg style. 
-Version:      v0.0.4 
+Version:      v0.0.2 
 Author:       Kreislinie - Simon Mettler 
 Author URI:   kreislinie.com 
 License:      GPLv3 
 License URI:  https://www.gnu.org/licenses/gpl-3.0.html 
 Text Domain:  albus-admin
-Domain Path:  /languages
 */
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
