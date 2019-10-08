@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name:  Albus Admin 
-Plugin URI:   kreislinie.com/albus 
+Plugin URI:   https://github.com/Kreislinie/albus-admin 
 Description:  Light and clean WordPress backend theme. 
-Version:      v0.0.4 
+Version:      v0.1.0 
 Author:       Kreislinie - Simon Mettler 
 Author URI:   kreislinie.com 
 License:      GPLv3 
@@ -11,18 +11,19 @@ License URI:  https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain:  albus-admin
 */
 
-defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
-
+if ( ! defined( 'ABSPATH' ) )
+  exit;
+  
 /* ------------------------------------------------------------
   1.0 - Load admin styles
 ------------------------------------------------------------ */
 
 function load_custom_wp_admin_style() {
 
-  wp_register_style( 'albus_style', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '0.0.4' );
+  wp_register_style( 'albus_style', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '0.1.0' );
   wp_enqueue_style( 'albus_style' );
 
-  wp_enqueue_script('albus_script', plugin_dir_url( __FILE__ ) . 'js/custom.min.js', [], '0.0.4', true);
+  wp_enqueue_script('albus_script', plugin_dir_url( __FILE__ ) . 'js/custom.min.js', [], '0.1.0', true);
 
 }
 add_action('admin_enqueue_scripts', 'load_custom_wp_admin_style'); // backend
@@ -37,7 +38,7 @@ add_filter('update_footer', 'my_footer_version', 11);
 //$default represents the existing text in the left side
 function my_footer_text($default) {
     //return the new footer text
-    return '<a target="_blank" href="https://de.wordpress.com/">WordPress</a> & <a target="_blank" href="https://kreislinie.com/">Albus Admin</a>';
+    return '<a target="_blank" href="https://de.wordpress.com/">WordPress</a> & <a target="_blank" href="https://github.com/Kreislinie/albus-admin">Albus Admin</a>';
 }
 
 //$default represents the exisiting text in the right side

@@ -7,6 +7,10 @@ Albus Admin is a light and clean WordPress backend theme.
 
 == Changelog ==
 
+= v0.1.0 =
+* First desktop beta release
+* Testing update system
+
 = v0.0.4 =
 * Testing update system
 

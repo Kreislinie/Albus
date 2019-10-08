@@ -5,6 +5,11 @@
 // Place main content.
 html.wp-toolbar {
   padding-top: $admin-bar-height;
+
+  @media screen and (max-width: 600px) {
+    padding-top: 0;
+  }
+
 }
 
 #wpcontent,
@@ -13,19 +18,19 @@ html.wp-toolbar {
   padding-left: $content-margin;
 }
 
-@media only screen and (max-width: 960px) {
-
-  .auto-fold #wpcontent,
-	.auto-fold #wpfooter {
-		margin-left: $admin-menu-collapse-width;
-	}
-
-}
-
 // Adapt margin to folded admin menu.
 .folded #wpcontent,
 .folded #wpfooter {
   margin-left: $admin-menu-collapse-width;
+
+  @media only screen and (max-width: 960px) {
+    margin-left: $admin-menu-collapse-width;
+  }
+
+  @media only screen and (max-width: 782px) {
+    margin-left: 0;
+  }
+
 }
 
 .wrap {

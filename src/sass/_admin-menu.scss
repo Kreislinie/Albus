@@ -8,12 +8,6 @@
   2.0 - Admin bar (top)
 ============================================================ */
 
-// Variables
-$admin-menu-width: 220px;
-$admin-menu-collapse-width: 57px;
-$content-margin: 35px; 
-$admin-bar-height: 50px;
-
 
 /* ------------------------------------------------------------
   1.0 - Admin menu (left)
@@ -50,6 +44,23 @@ $admin-bar-height: 50px;
   width: $admin-menu-width - 15px;
 }
 
+@media screen and (max-width: 782px) {
+
+  // Set open mobile menu width.
+  .auto-fold .wp-responsive-open #adminmenuback, 
+  .auto-fold .wp-responsive-open #adminmenuwrap {
+    width: $admin-menu-width;
+  }
+
+  // Put mobile admin menu behind admin bar.
+  .auto-fold #adminmenu, 
+  .auto-fold #adminmenuback, 
+  .auto-fold #adminmenuwrap {
+    z-index: -100;
+  }
+
+}
+
 // Auto folded admin menu.
 @media only screen and (max-width: 960px) {
 
@@ -58,7 +69,7 @@ $admin-bar-height: 50px;
 	.auto-fold #adminmenu,
 	.auto-fold #adminmenu li.menu-top {
     width: $admin-menu-collapse-width;
-	}
+  }
 
 	.auto-fold #adminmenu .wp-submenu.sub-open,
 	.auto-fold #adminmenu .opensub .wp-submenu,
@@ -185,7 +196,7 @@ $admin-bar-height: 50px;
 ------------------------------------------------------------ */
 
 // Admin bar styling.
-#wpadminbar {
+html #wpadminbar {
   height: $admin-bar-height;
   padding: 0 $content-margin;
   border-bottom: $default-border;
@@ -198,13 +209,24 @@ $admin-bar-height: 50px;
     line-height: $admin-bar-height;
   }
 
-}
+  // Height for mobile version.
+  @media only screen and (max-width: 782px) {
+    height: 50px;
+  }
 
+}
 
 // Admin bar width.
 #wpwrap #wpadminbar {
   width: calc( 100% - #{$admin-menu-width} - 2 * #{$content-margin} );
+
+  @media screen and ( max-width: 782px ) {
+    padding: 0;
+  }
+  
 }
+
+
 
 // Sets width if menu folded.
 // This possibly could work with less calculations...
@@ -239,6 +261,11 @@ $admin-bar-height: 50px;
 #wpadminbar>#wp-toolbar>#wp-admin-bar-root-default .ab-icon, 
 .wp-admin-bar-arrow {
   padding-top: $admin-bar-height / 4;
+
+  @media only screen and (max-width: 782px) {
+    padding-top: 0;
+  }
+
 }
 
 // Hides avatar icon.

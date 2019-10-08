@@ -1,0 +1,38 @@
+@media (min-width: 782px) {
+
+  // Edit post bar position.
+  .edit-post-header {
+    top: 51px;
+    left: $admin-menu-width;
+  }
+
+  .folded .edit-post-header {
+    left: $admin-menu-collapse-width;
+  }
+
+  // Post content area position.
+  body .edit-post-layout__content {
+    margin-left: $admin-menu-width;
+    top: 56px + $admin-bar-height;
+  }
+
+  body.folded .edit-post-layout__content {
+    margin-left: $admin-menu-collapse-width;
+  }
+
+  // Push sidebar down.
+  .edit-post-sidebar {
+    top: 57px + $admin-bar-height;
+  }
+  
+}
+
+// Metabox
+.edit-post-meta-boxes-area .postbox {
+  border: 1px solid #e5e5e5;
+}
+
+.edit-post-layout__metaboxes:not(:empty) {
+  border-top: $default-border;
+  padding: 21px 0px 37px 0;
+}

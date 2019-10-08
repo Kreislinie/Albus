@@ -111,8 +111,8 @@ div#wp-responsive-toggle a:before{color:#595959}
 #adminmenu .wp-submenu .wp-submenu-head{font-weight:bold}
 #collapse-menu span,#collapse-menu #collapse-button div:after{opacity:.4}
 #collapse-menu:hover span,#collapse-menu:hover #collapse-button div:after{opacity:1;color:#0089ac}
-#wpadminbar{height:50px;padding:0 35px;border-bottom:1px solid lightgray;-webkit-box-shadow:0 0 10px -5px rgba(0,0,0,0.33);box-shadow:0 0 10px -5px rgba(0,0,0,0.33);left:unset;right:0;z-index:1}
-#wpadminbar li a{line-height:50px}
+html #wpadminbar{height:50px;padding:0 35px;border-bottom:1px solid lightgray;-webkit-box-shadow:0 0 10px -5px rgba(0,0,0,0.33);box-shadow:0 0 10px -5px rgba(0,0,0,0.33);left:unset;right:0;z-index:1}
+html #wpadminbar li a{line-height:50px}
 #wpwrap #wpadminbar{width:calc(100% - 220px - 2 * 35px)}
 .folded #wpwrap #wpadminbar{width:calc(100% - 57px - 2 * 35px)}
 #wpadminbar .quicklinks .ab-empty-item,#wpadminbar .quicklinks a,#wpadminbar .shortlink-input{height:50px}
@@ -145,16 +145,30 @@ td,.check-column{border-bottom:1px solid lightgray}
 .edit-attachment-frame .attachment-info{background:transparent}
 .theme-overlay .theme-wrap{top:35px;right:35px;bottom:35px;left:35px}
 .theme-overlay .theme-backdrop{position:fixed;top:0;left:0;right:0;bottom:0;min-height:360px;background:#000;opacity:.7}
+.edit-post-meta-boxes-area .postbox{border:1px solid #e5e5e5}
+.edit-post-layout__metaboxes:not(:empty){border-top:1px solid lightgray;padding:21px 0 37px 0}
 html.wp-toolbar{padding-top:50px}
 #wpcontent,#wpfooter{margin-left:220px;padding-left:35px}
 .folded #wpcontent,.folded #wpfooter{margin-left:57px}
 .wrap{margin:55px 35px 0 2px}
 #screen-meta-links{margin-right:35px}
 .notice-error,div.error,div.updated{border-top:1px solid lightgray;border-right:1px solid lightgray;border-bottom:1px solid lightgray;-webkit-box-shadow:none;box-shadow:none}
-@media only screen and (max-width:960px){.auto-fold #adminmenuback,.auto-fold #adminmenuwrap,.auto-fold #adminmenu,.auto-fold #adminmenu li.menu-top{width:57px}
+@media(min-width:782px){.edit-post-header{top:51px;left:220px}
+.folded .edit-post-header{left:57px}
+body .edit-post-layout__content{margin-left:220px;top:106px}
+body.folded .edit-post-layout__content{margin-left:57px}
+.edit-post-sidebar{top:107px}
+}@media only screen and (max-width:960px){.auto-fold #adminmenuback,.auto-fold #adminmenuwrap,.auto-fold #adminmenu,.auto-fold #adminmenu li.menu-top{width:57px}
 .auto-fold #adminmenu .wp-submenu.sub-open,.auto-fold #adminmenu .opensub .wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,.auto-fold #adminmenu .wp-has-current-submenu.opensub .wp-submenu,.auto-fold #adminmenu a.menu-top:focus+.wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu a.menu-top:focus+.wp-submenu{left:57px}
 .auto-fold #adminmenuwrap ul#adminmenu{padding-left:10px}
 .auto-fold #wpwrap #wpadminbar{width:calc(100% - 57px - 2 * 35px)}
-.auto-fold #wpcontent,.auto-fold #wpfooter{margin-left:57px}
-}@media only screen and (max-width:782px){.auto-fold #wpwrap #wpadminbar{width:100%}
+.folded #wpcontent,.folded #wpfooter{margin-left:57px}
+}@media screen and (max-width:782px){.auto-fold .wp-responsive-open #adminmenuback,.auto-fold .wp-responsive-open #adminmenuwrap{width:220px}
+.auto-fold #adminmenu,.auto-fold #adminmenuback,.auto-fold #adminmenuwrap{z-index:-100}
+#wpwrap #wpadminbar{padding:0}
+}@media only screen and (max-width:782px){html #wpadminbar{height:50px}
+.auto-fold #wpwrap #wpadminbar{width:100%}
+#wpadminbar .ab-icon,#wpadminbar .ab-item:before,#wpadminbar>#wp-toolbar>#wp-admin-bar-root-default .ab-icon,.wp-admin-bar-arrow{padding-top:0}
+.folded #wpcontent,.folded #wpfooter{margin-left:0}
+}@media screen and (max-width:600px){html.wp-toolbar{padding-top:0}
 }
