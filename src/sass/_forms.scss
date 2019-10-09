@@ -75,7 +75,7 @@ input[type=checkbox]:checked:before {
   background: rgb(255, 255, 255) !important;
 }
 
-// select dropdown
+// Select dropdown
 .wp-admin select {
   margin-bottom: 10px;
 	box-shadow: none;
@@ -83,8 +83,8 @@ input[type=checkbox]:checked:before {
   appearance: none;
   padding: 0 39px 0 15px;
 
-  // down arrow
-  background-image: url("/wp-content/plugins/albus-admin/img/albus-admin-arrow.svg"); // FF does not support inline svg :(
+  // base64 svg (src: imag/albus-admin-arrow.svg) see https://stackoverflow.com/a/21626701
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNCcgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0Jz48cGF0aCBkPSdNMTggOC4ybC02IDcgLTYtN0gxOHonIGZpbGw9JyNlMmU0ZTcnLz48L3N2Zz4="); // FF does not support inline svg :(
   background-position: 93% 59%;
   background-repeat: no-repeat;
   background-size: 22px;
