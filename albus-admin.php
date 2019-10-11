@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) )
   exit;
   
 /* ------------------------------------------------------------
-  1.0 - Load admin styles
+  1.0 - Syles and scripts
 ------------------------------------------------------------ */
 
 function load_custom_wp_admin_style() {
@@ -30,25 +30,45 @@ add_action('admin_enqueue_scripts', 'load_custom_wp_admin_style'); // backend
 add_action('admin_bar_init', 'load_custom_wp_admin_style'); // frontend (admin bar)
 
 
-//fired before left side footer text is echoed.
-add_filter('admin_footer_text', 'my_footer_text');
-//fired before right side footer text is echoed. Third parameter is just a indication of a version number, its values doesn't make any other sense.
-add_filter('update_footer', 'my_footer_version', 11);
+/* ------------------------------------------------------------
+  2.0 - Footer text
+------------------------------------------------------------ */
  
-//$default represents the existing text in the left side
-function my_footer_text($default) {
-    //return the new footer text
-    return '<a target="_blank" href="https://de.wordpress.com/">WordPress</a> & <a target="_blank" href="https://github.com/Kreislinie/albus-admin">Albus Admin</a>';
+// New footer text.
+function albus_footer_text() {
+  return '<a target="_blank" href="https://de.wordpress.com/">WordPress</a> & <a target="_blank" href="https://github.com/Kreislinie/albus-admin">Albus Admin</a>';
 }
 
-//$default represents the exisiting text in the right side
-function my_footer_version($default) {
-    //return the new footer text
-    return $default;
+// Fired before left side footer text is echoed.
+add_filter('admin_footer_text', 'albus_footer_text');
+
+
+/* ------------------------------------------------------------
+  3.0 - Option
+------------------------------------------------------------ */
+
+// Adds option page.
+function albus_options_menu() {
+	add_options_page( 'Albus Admin Options', 'Albus Admin', 'manage_options', 'albus-admin', 'albus_options' );
+}
+
+add_action( 'admin_menu', 'albus_options_menu' );
+
+// Options page content.
+function albus_options() {
+
+  // Checks permissions.
+	if ( !current_user_can( 'manage_options' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+  }
+  
+  // Page content
+  echo '<div class="wrap"><h1>Albus Admin Settings</h1></div>';
+
 }
 
 /* ------------------------------------------------------------
-  2.0 - Add update functionality
+  4.0 - Update functionality
 ------------------------------------------------------------ */
 
 require 'vendors/plugin-update-checker/plugin-update-checker.php';
