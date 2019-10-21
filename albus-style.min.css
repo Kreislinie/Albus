@@ -92,6 +92,7 @@ div#wp-responsive-toggle a:before{color:#595959}
 .wp-core-ui .button.button-primary.button-hero{-webkit-box-shadow:none;box-shadow:none}
 .wrap .page-title-action{background:#0089ac;border:0;border-radius:5px;color:white}
 .wrap .page-title-action:hover{background:#0089ac;color:white}
+#adminmenu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 #adminmenuback{border-right:1px solid lightgray;background:white;-webkit-box-shadow:0 0 10px -5px rgba(0,0,0,0.33);box-shadow:0 0 10px -5px rgba(0,0,0,0.33)}
 #adminmenu .wp-submenu{top:-1000em;left:205px}
 #adminmenu .wp-has-current-submenu ul>li>a,.folded #adminmenu li.menu-top .wp-submenu>li>a{padding:5px 0 5px 37px}
@@ -136,6 +137,8 @@ table.wp-list-table.widefat{margin:20px 0;border:0;border:1px solid lightgray}
 .striped>tbody>:nth-child(n):hover,ul.striped>:nth-child(n):hover{background:#f9f9f9}
 td,.check-column{border-bottom:1px solid lightgray}
 .tablenav{height:45px}
+#adminmenu #aa-custom-logo{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1;opacity:1 !important;margin:-40px 0 20px 0}
+#adminmenu #aa-custom-logo img{width:170px}
 .wp-filter{border:0;-webkit-box-shadow:none;box-shadow:none}
 .media-frame.mode-grid .media-toolbar select,.media-frame.mode-grid.mode-edit .media-toolbar-secondary>.select-mode-toggle-button,.media-toolbar.wp-filter .view-switch{margin-top:10px}
 .media-frame.mode-grid .attachment.details:focus,.media-frame.mode-grid .attachment:focus,.media-frame.mode-grid .selected.attachment:focus{-webkit-box-shadow:none;box-shadow:none}

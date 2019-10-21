@@ -12,6 +12,11 @@
 /* ------------------------------------------------------------
   1.0 - Admin menu (left)
 ------------------------------------------------------------ */
+// Necessary to display custom logo.
+#adminmenu {
+  display: flex;
+  flex-direction: column;
+}
 
 // Admin menu styling.
 #adminmenuback {
