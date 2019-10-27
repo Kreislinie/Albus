@@ -32,9 +32,14 @@
 }
 
 // Set position of submenu within admin bar.
-#adminmenu .wp-has-current-submenu ul>li>a, 
-.folded #adminmenu li.menu-top .wp-submenu>li>a {
+#adminmenu .wp-has-current-submenu ul>li>a {
   padding: 5px 0px 5px 37px;
+}
+
+// Hover submenu styling.
+#adminmenu .wp-not-current-submenu .wp-submenu, 
+.folded #adminmenu .wp-has-current-submenu .wp-submenu {
+  border: $default-border;
 }
 
 // Admin menu width.
@@ -82,7 +87,9 @@
 	.auto-fold #adminmenu .wp-has-current-submenu.opensub .wp-submenu,
 	.auto-fold #adminmenu a.menu-top:focus + .wp-submenu,
 	.auto-fold #adminmenu .wp-has-current-submenu a.menu-top:focus + .wp-submenu {
-		left: $admin-menu-collapse-width;
+    left: $admin-menu-collapse-width;
+    border: $default-border;
+
   }
   
   // Icon padding.
@@ -173,6 +180,7 @@
   box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.33);
 }
 
+
 // Open submenu arrow.
 #adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
 	border-right-color: $base-color;
@@ -182,13 +190,13 @@
   font-weight: bold;
 }
 
-// Collapse menu button
+// Collapse menu button.
 #collapse-menu span,
 #collapse-menu #collapse-button div:after {
   opacity: 0.4;
 }
 
-// collapse menu button hover
+// Collapse menu button hover.
 #collapse-menu:hover span,
 #collapse-menu:hover #collapse-button div:after {
   opacity: 1;
@@ -231,10 +239,7 @@ html #wpadminbar {
   
 }
 
-
-
-// Sets width if menu folded.
-// This possibly could work with less calculations...
+// Sets width if menu folded. (This possibly could work with less calculations...)
 .folded #wpwrap #wpadminbar {
   width: calc( 100% - #{$admin-menu-collapse-width} - 2 * #{$content-margin} );
 }
@@ -273,7 +278,18 @@ html #wpadminbar {
 
 }
 
-// Hides avatar icon.
-.ab-item > img.avatar {
-  display: none;
+// Admin bar submenu.
+#wpadminbar .menupop .ab-sub-wrapper, 
+#wpadminbar .shortlink-input {
+  border: $default-border;
+}
+
+// Place avatar image.
+#wp-admin-bar-user-info .avatar {
+  left: -79px;
+  top: 9px;
+}
+
+#wpadminbar #wp-admin-bar-my-account.with-avatar #wp-admin-bar-user-actions>li {
+  margin-left: 104px;
 }

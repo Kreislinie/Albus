@@ -95,7 +95,8 @@ div#wp-responsive-toggle a:before{color:#595959}
 #adminmenu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 #adminmenuback{border-right:1px solid lightgray;background:white;-webkit-box-shadow:0 0 10px -5px rgba(0,0,0,0.33);box-shadow:0 0 10px -5px rgba(0,0,0,0.33)}
 #adminmenu .wp-submenu{top:-1000em;left:205px}
-#adminmenu .wp-has-current-submenu ul>li>a,.folded #adminmenu li.menu-top .wp-submenu>li>a{padding:5px 0 5px 37px}
+#adminmenu .wp-has-current-submenu ul>li>a{padding:5px 0 5px 37px}
+#adminmenu .wp-not-current-submenu .wp-submenu,.folded #adminmenu .wp-has-current-submenu .wp-submenu{border:1px solid lightgray}
 #adminmenuback,#adminmenuwrap,#adminmenu{width:220px;z-index:9998}
 #adminmenu div.wp-menu-name{width:205px}
 .folded #adminmenuback,.folded #adminmenuwrap,.folded #adminmenu,.folded #adminmenu li.menu-top{width:57px}
@@ -118,7 +119,9 @@ html #wpadminbar li a{line-height:50px}
 .folded #wpwrap #wpadminbar{width:calc(100% - 57px - 2 * 35px)}
 #wpadminbar .quicklinks .ab-empty-item,#wpadminbar .quicklinks a,#wpadminbar .shortlink-input{height:50px}
 #wpadminbar .ab-icon,#wpadminbar .ab-item:before,#wpadminbar>#wp-toolbar>#wp-admin-bar-root-default .ab-icon,.wp-admin-bar-arrow{padding-top:12.5px}
-.ab-item>img.avatar{display:none}
+#wpadminbar .menupop .ab-sub-wrapper,#wpadminbar .shortlink-input{border:1px solid lightgray}
+#wp-admin-bar-user-info .avatar{left:-79px;top:9px}
+#wpadminbar #wp-admin-bar-my-account.with-avatar #wp-admin-bar-user-actions>li{margin-left:104px}
 .wp-admin input[type="text"],.wp-admin input[type="password"],.wp-admin input[type="color"],.wp-admin input[type="date"],.wp-admin input[type="datetime"],.wp-admin input[type="datetime-local"],.wp-admin input[type="email"],.wp-admin input[type="month"],.wp-admin input[type="number"],.wp-admin input[type="search"],.wp-admin input[type="tel"],.wp-admin input[type="text"],.wp-admin input[type="time"],.wp-admin input[type="url"],.wp-admin input[type="week"],.wp-admin select,.wp-admin textarea,.wp-admin #titlediv #title{background-color:#f7f7f7;border-top-left-radius:5px;border-top-right-radius:5px;border-top:transparent;border-right:transparent;border-left:transparent;border-bottom:2px solid lightgray;-webkit-box-shadow:none;box-shadow:none;color:#32373c;outline:0;padding:13px}
 .wp-admin input[type="text"]:focus,.wp-admin input[type="password"]:focus,.wp-admin input[type="color"]:focus,.wp-admin input[type="date"]:focus,.wp-admin input[type="datetime"]:focus,.wp-admin input[type="datetime-local"]:focus,.wp-admin input[type="email"]:focus,.wp-admin input[type="month"]:focus,.wp-admin input[type="number"]:focus,.wp-admin input[type="search"]:focus,.wp-admin input[type="tel"]:focus,.wp-admin input[type="text"]:focus,.wp-admin input[type="time"]:focus,.wp-admin input[type="url"]:focus,.wp-admin input[type="week"]:focus,.wp-admin select:focus,.wp-admin textarea:focus,.wp-admin #titlediv #title:focus{outline:0;border-bottom:2px solid #0089ac;border:transparent;border-bottom:2px solid #0089ac;-webkit-box-shadow:none;box-shadow:none}
 .wp-admin input[type="text"],.wp-admin input[type="password"],.wp-admin input[type="color"],.wp-admin input[type="date"],.wp-admin input[type="datetime"],.wp-admin input[type="datetime-local"],.wp-admin input[type="email"],.wp-admin input[type="month"],.wp-admin input[type="number"],.wp-admin input[type="search"],.wp-admin input[type="tel"],.wp-admin input[type="text"],.wp-admin input[type="time"],.wp-admin input[type="url"],.wp-admin input[type="week"]{height:45px}
@@ -139,7 +142,7 @@ td,.check-column{border-bottom:1px solid lightgray}
 .tablenav{height:45px}
 #adminmenu #aa-custom-logo{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1;opacity:1 !important;margin:-40px 0 20px 0}
 #adminmenu #aa-custom-logo img{width:170px}
-.wp-filter{border:0;-webkit-box-shadow:none;box-shadow:none}
+.wp-filter{border:0;-webkit-box-shadow:none;box-shadow:none;background:transparent}
 .media-frame.mode-grid .media-toolbar select,.media-frame.mode-grid.mode-edit .media-toolbar-secondary>.select-mode-toggle-button,.media-toolbar.wp-filter .view-switch{margin-top:10px}
 .media-frame.mode-grid .attachment.details:focus,.media-frame.mode-grid .attachment:focus,.media-frame.mode-grid .selected.attachment:focus{-webkit-box-shadow:none;box-shadow:none}
 .media-frame.mode-grid .attachment.details:focus .attachment-preview,.media-frame.mode-grid .attachment:focus .attachment-preview,.media-frame.mode-grid .selected.attachment:focus .attachment-preview{border:2px solid #0089ac;-webkit-box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
@@ -162,7 +165,7 @@ body .edit-post-layout__content{margin-left:220px;top:106px}
 body.folded .edit-post-layout__content{margin-left:57px}
 .edit-post-sidebar{top:107px}
 }@media only screen and (max-width:960px){.auto-fold #adminmenuback,.auto-fold #adminmenuwrap,.auto-fold #adminmenu,.auto-fold #adminmenu li.menu-top{width:57px}
-.auto-fold #adminmenu .wp-submenu.sub-open,.auto-fold #adminmenu .opensub .wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,.auto-fold #adminmenu .wp-has-current-submenu.opensub .wp-submenu,.auto-fold #adminmenu a.menu-top:focus+.wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu a.menu-top:focus+.wp-submenu{left:57px}
+.auto-fold #adminmenu .wp-submenu.sub-open,.auto-fold #adminmenu .opensub .wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,.auto-fold #adminmenu .wp-has-current-submenu.opensub .wp-submenu,.auto-fold #adminmenu a.menu-top:focus+.wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu a.menu-top:focus+.wp-submenu{left:57px;border:1px solid lightgray}
 .auto-fold #adminmenuwrap ul#adminmenu{padding-left:10px}
 .auto-fold #wpwrap #wpadminbar{width:calc(100% - 57px - 2 * 35px)}
 .folded #wpcontent,.folded #wpfooter{margin-left:57px}
