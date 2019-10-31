@@ -3,7 +3,7 @@
 Plugin Name:  Albus Admin 
 Plugin URI:   https://github.com/Kreislinie/albus-admin 
 Description:  Light WordPress backend theme. 
-Version:      v0.1.0 
+Version:      v0.1.1 
 Author:       Kreislinie - Simon Mettler 
 Author URI:   kreislinie.com 
 License:      GPLv3 
