@@ -165,8 +165,13 @@ function albus_options_page() {
 function albus_display_custom_logo() {
   $albus_options = get_option( 'albus_options' );
 
-  $custom_logo =  wp_get_attachment_image_src( $albus_options['albus_custom_logo'], 'full' );
-  printf( '<li id="aa-custom-logo" ><img src="%s"></li>', $custom_logo[0] );
+  if ( !empty( $albus_options['albus_custom_logo'] ) ) {
+    
+    $custom_logo =  wp_get_attachment_image_src( $albus_options['albus_custom_logo'], 'full' );
+    printf( '<li id="aa-custom-logo" >test<img src="%s"></li>', $custom_logo[0] );
+
+  }
+
 }
 
 add_action('adminmenu', 'albus_display_custom_logo');
