@@ -7,6 +7,10 @@ Albus Admin is a light and clean WordPress backend theme.
 
 == Changelog ==
 
+= v0.1.2 =
+* Bugfix regarding logo upload
+* Appearance/Theme browser styling
+
 = v0.1.1 =
 * Now you can upload your own logo
 
