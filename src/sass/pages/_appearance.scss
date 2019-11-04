@@ -1,9 +1,8 @@
-.theme-overlay .theme-wrap {
-  top: $content-margin;
-  right: $content-margin;
-  bottom: $content-margin;
-  left: $content-margin;
+// Push theme browser down.
+.theme-browser {
+  margin-top: 25px;
 }
+
 
 // Add default backdrop.
 .theme-overlay .theme-backdrop {
@@ -15,4 +14,49 @@
   min-height: 360px;
   background: #000;
   opacity: .7;
+}
+
+.theme-overlay .theme-wrap {
+  top: $content-margin;
+  right: $content-margin;
+  bottom: $content-margin;
+  left: $content-margin;
+
+  .theme-actions a {
+    line-height: 45px;
+  }
+
+}
+
+// Add & upload theme overview styling.
+.theme-browser .theme .theme-actions, 
+.theme-browser .theme.active .theme-actions {
+  height: 30px;
+  padding: 0;
+  margin-right: 8px;
+  background: none;
+  box-shadow: none;
+  border: none;
+
+  a, button {
+    height: 31px;
+    line-height: 30px;
+    
+    &:hover {
+      box-shadow: none;
+    }
+
+  }
+
+}
+
+// Install and change theme button.
+.theme-install-overlay .wp-full-overlay-header .button,
+#customize-theme-controls .control-panel-themes .accordion-section-title .change-theme {
+  height: 31px;
+  line-height: 30px;
+}
+
+#nav-menu-footer, #nav-menu-header {
+  background: white;
 }

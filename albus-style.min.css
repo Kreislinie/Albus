@@ -149,8 +149,15 @@ td,.check-column{border-bottom:1px solid lightgray}
 .media-frame.mode-grid .attachment.details:hover .attachment-preview,.media-frame.mode-grid .attachment:hover .attachment-preview,.media-frame.mode-grid .selected.attachment:hover .attachment-preview{-webkit-box-shadow:0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);box-shadow:0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)}
 .media-frame .attachments-browser,.attachments-browser .attachments,.attachments-browser .uploader-inline,.media-frame-content,#wp-media-grid,.media-frame{overflow:visible}
 .edit-attachment-frame .attachment-info{background:transparent}
-.theme-overlay .theme-wrap{top:35px;right:35px;bottom:35px;left:35px}
+.theme-browser{margin-top:25px}
 .theme-overlay .theme-backdrop{position:fixed;top:0;left:0;right:0;bottom:0;min-height:360px;background:#000;opacity:.7}
+.theme-overlay .theme-wrap{top:35px;right:35px;bottom:35px;left:35px}
+.theme-overlay .theme-wrap .theme-actions a{line-height:45px}
+.theme-browser .theme .theme-actions,.theme-browser .theme.active .theme-actions{height:30px;padding:0;margin-right:8px;background:0;-webkit-box-shadow:none;box-shadow:none;border:0}
+.theme-browser .theme .theme-actions a,.theme-browser .theme .theme-actions button,.theme-browser .theme.active .theme-actions a,.theme-browser .theme.active .theme-actions button{height:31px;line-height:30px}
+.theme-browser .theme .theme-actions a:hover,.theme-browser .theme .theme-actions button:hover,.theme-browser .theme.active .theme-actions a:hover,.theme-browser .theme.active .theme-actions button:hover{-webkit-box-shadow:none;box-shadow:none}
+.theme-install-overlay .wp-full-overlay-header .button,#customize-theme-controls .control-panel-themes .accordion-section-title .change-theme{height:31px;line-height:30px}
+#nav-menu-footer,#nav-menu-header{background:white}
 .edit-post-meta-boxes-area .postbox{border:1px solid #e5e5e5}
 .edit-post-layout__metaboxes:not(:empty){border-top:1px solid lightgray;padding:21px 0 37px 0}
 html.wp-toolbar{padding-top:50px}
