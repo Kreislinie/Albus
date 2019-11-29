@@ -142,6 +142,7 @@ td,.check-column{border-bottom:1px solid lightgray}
 .tablenav{height:45px}
 #adminmenu #aa-custom-logo{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1;opacity:1 !important;margin:-40px 0 20px 0}
 #adminmenu #aa-custom-logo img{width:170px}
+.folded #adminmenu #aa-custom-logo,.auto-fold #adminmenu #aa-custom-logo{display:none}
 .wp-filter{border:0;-webkit-box-shadow:none;box-shadow:none;background:transparent}
 .media-frame.mode-grid .media-toolbar select,.media-frame.mode-grid.mode-edit .media-toolbar-secondary>.select-mode-toggle-button,.media-toolbar.wp-filter .view-switch{margin-top:10px}
 .media-frame.mode-grid .attachment.details:focus,.media-frame.mode-grid .attachment:focus,.media-frame.mode-grid .selected.attachment:focus{-webkit-box-shadow:none;box-shadow:none}

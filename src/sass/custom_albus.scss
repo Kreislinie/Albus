@@ -1,15 +1,16 @@
-#adminmenu #aa-custom-logo
-{
+#adminmenu #aa-custom-logo {
   order: -1;
   opacity: 1!important;
   margin: -40px 0 20px 0;
-
-
-img {
-
-  width: $admin-menu-width - 50px;
   
+  img {
+    width: $admin-menu-width - 50px;
+  }
 
+}
 
-
-}}
+// Hide logo if menu folded.
+.folded #adminmenu #aa-custom-logo,
+.auto-fold #adminmenu #aa-custom-logo {
+  display: none;
+}
