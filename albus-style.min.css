@@ -142,7 +142,7 @@ td,.check-column{border-bottom:1px solid lightgray}
 .tablenav{height:45px}
 #adminmenu #aa-custom-logo{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1;opacity:1 !important;margin:-40px 0 20px 0}
 #adminmenu #aa-custom-logo img{width:170px}
-.folded #adminmenu #aa-custom-logo,.auto-fold #adminmenu #aa-custom-logo{display:none}
+.folded #adminmenu #aa-custom-logo{display:none}
 .wp-filter{border:0;-webkit-box-shadow:none;box-shadow:none;background:transparent}
 .media-frame.mode-grid .media-toolbar select,.media-frame.mode-grid.mode-edit .media-toolbar-secondary>.select-mode-toggle-button,.media-toolbar.wp-filter .view-switch{margin-top:10px}
 .media-frame.mode-grid .attachment.details:focus,.media-frame.mode-grid .attachment:focus,.media-frame.mode-grid .selected.attachment:focus{-webkit-box-shadow:none;box-shadow:none}
@@ -179,6 +179,7 @@ body.folded .edit-post-layout__content{margin-left:57px}
 .auto-fold #adminmenuwrap ul#adminmenu{padding-left:10px}
 .auto-fold #wpwrap #wpadminbar{width:calc(100% - 57px - 2 * 35px)}
 .folded #wpcontent,.folded #wpfooter{margin-left:57px}
+}@media screen and (max-width:960px){.auto-fold #adminmenu #aa-custom-logo{display:none}
 }@media screen and (max-width:782px){.auto-fold .wp-responsive-open #adminmenuback,.auto-fold .wp-responsive-open #adminmenuwrap{width:220px}
 .auto-fold #adminmenu,.auto-fold #adminmenuback,.auto-fold #adminmenuwrap{z-index:-100}
 #wpwrap #wpadminbar{padding:0}

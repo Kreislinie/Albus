@@ -10,7 +10,12 @@
 }
 
 // Hide logo if menu folded.
-.folded #adminmenu #aa-custom-logo,
-.auto-fold #adminmenu #aa-custom-logo {
+.folded #adminmenu #aa-custom-logo {
   display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .auto-fold #adminmenu #aa-custom-logo {
+    display: none;
+  }
 }
