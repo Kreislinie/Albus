@@ -133,7 +133,8 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover,
 .form-field label{font-size:1.1em}
 .search-box input[type="search"]{height:45px}
 input[type=checkbox]{border-radius:2px;border:2px solid #6c7781;margin-right:12px;-webkit-transition:none;transition:none}
-input[type=checkbox]:checked{background:#11a0d2;border-color:#11a0d2;color:white}
+input[type=checkbox]:checked{background:#11a0d2;border-color:#11a0d2;-webkit-box-shadow:none;box-shadow:none}
+input[type=checkbox]:checked::before{content:url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%23ffffff%27%2F%3E%3C%2Fsvg%3E)}
 table.wp-list-table.widefat{margin:20px 0;border:0;border:1px solid lightgray}
 .widefat td,.widefat th,.updates-table tbody td.check-column,.widefat tbody th.check-column,.widefat tfoot td.check-column,.widefat thead td.check-column{padding:18px 10px}
 .striped>tbody>:nth-child(n),ul.striped>:nth-child(n){background:inherit}
