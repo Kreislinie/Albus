@@ -1,23 +1,53 @@
+/* ------------------------------------------------------------
+  1.0 - Edit Post Header
+------------------------------------------------------------ */
+.edit-post-header {
+  top: 51px;
+}
+
 @media (min-width: 782px) {
-
-  // Edit post bar position.
   .edit-post-header {
-    top: 51px;
-    left: $admin-menu-width;
-  }
+    left: $admin-menu-width; 
+  } 
+}
 
+/* Auto fold is when on smaller breakpoints, nav menu auto collapses. */
+@media (min-width: 782px) {
+  .auto-fold .edit-post-header {
+    left: $admin-menu-collapse-width;
+  }  
+}  
+
+@media (min-width: 960px) {
+  .auto-fold .edit-post-header {
+    left: $admin-menu-width;
+  } 
+}
+
+/* Sidebar manually collapsed. */
+@media (min-width: 782px) {
   .folded .edit-post-header {
     left: $admin-menu-collapse-width;
+  } 
+}
+
+/* Mobile menu opened. */
+@media (max-width: 782px) {
+  .auto-fold .wp-responsive-open .edit-post-header {
+    left: 190px; 
   }
+}
+
+
+/* ------------------------------------------------------------
+  2.0 - Edit Post Content
+------------------------------------------------------------ */
+
+@media (min-width: 782px) {
 
   // Post content area position.
   body .edit-post-layout__content {
-    margin-left: $admin-menu-width;
     top: 56px + $admin-bar-height;
-  }
-
-  body.folded .edit-post-layout__content {
-    margin-left: $admin-menu-collapse-width;
   }
 
   // Push sidebar down.
@@ -26,6 +56,28 @@
   }
   
 }
+
+@media (min-width: 782px) {
+  body.auto-fold .edit-post-layout__content {
+    margin-left: $admin-menu-collapse-width;
+  } 
+}
+
+@media (min-width: 782px) and (min-width: 960px) {
+  body.auto-fold .edit-post-layout__content {
+    margin-left: $admin-menu-width; 
+  } 
+}
+
+@media (min-width: 782px) { 
+  body.folded .edit-post-layout__content {
+    margin-left: $admin-menu-collapse-width; 
+  }
+}
+
+/* ------------------------------------------------------------
+  3.0 - Metaboxes
+------------------------------------------------------------ */
 
 // Metabox
 .edit-post-meta-boxes-area .postbox {
