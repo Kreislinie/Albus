@@ -5,7 +5,7 @@ Plugin URI:   https://github.com/Kreislinie/albus-admin
 Description:  Light WordPress backend theme. 
 Version:      v0.1.3 
 Author:       Kreislinie - Simon Mettler 
-Author URI:   kreislinie.com 
+Author URI:   https://kreislinie.com 
 License:      GPLv3 
 License URI:  https://www.gnu.org/licenses/gpl-3.0.html 
 Text Domain:  albus-admin
