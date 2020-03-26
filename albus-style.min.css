@@ -185,9 +185,12 @@ body.folded .edit-post-layout__content{margin-left:57px}
 .auto-fold #adminmenuwrap ul#adminmenu{padding-left:10px}
 .auto-fold #wpwrap #wpadminbar{width:calc(100% - 57px - 2 * 35px)}
 .folded #wpcontent,.folded #wpfooter{margin-left:57px}
+}@media only screen and (max-width:960px) and (max-width:783px){.auto-fold #adminmenu .wp-submenu.sub-open,.auto-fold #adminmenu .opensub .wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,.auto-fold #adminmenu .wp-has-current-submenu.opensub .wp-submenu,.auto-fold #adminmenu a.menu-top:focus+.wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu a.menu-top:focus+.wp-submenu{left:-1px;border:0}
 }@media screen and (max-width:960px){.auto-fold #adminmenu #aa-custom-logo{display:none}
-}@media screen and (max-width:782px){.auto-fold .wp-responsive-open #adminmenuback,.auto-fold .wp-responsive-open #adminmenuwrap{width:220px}
-.auto-fold #adminmenu,.auto-fold #adminmenuback,.auto-fold #adminmenuwrap{z-index:-100}
+}@media screen and (max-width:782px){#adminmenu .wp-not-current-submenu .wp-submenu,.folded #adminmenu .wp-has-current-submenu .wp-submenu{border:0}
+.auto-fold .wp-responsive-open #adminmenuback,.auto-fold .wp-responsive-open #adminmenuwrap{width:220px}
+.auto-fold #adminmenu,.auto-fold #adminmenuback,.auto-fold #adminmenuwrap{z-index:1}
+.wp-submenu .wp-submenu-wrap{border:0}
 #wpwrap #wpadminbar{padding:0}
 }@media only screen and (max-width:782px){html #wpadminbar{height:50px}
 .auto-fold #wpwrap #wpadminbar{width:100%}
