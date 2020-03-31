@@ -168,7 +168,6 @@ td,.check-column{border-bottom:1px solid lightgray}
 html.wp-toolbar{padding-top:50px}
 #wpcontent,#wpfooter{margin-left:220px;padding-left:35px}
 .folded #wpcontent,.folded #wpfooter{margin-left:57px}
-.wrap{margin:55px 35px 0 2px}
 #screen-meta-links{margin-right:35px}
 .notice-error,div.error,div.updated{border-top:1px solid lightgray;border-right:1px solid lightgray;border-bottom:1px solid lightgray;-webkit-box-shadow:none;box-shadow:none}
 @media(min-width:782px){.edit-post-header{left:220px}
@@ -180,6 +179,7 @@ body.auto-fold .edit-post-layout__content{margin-left:57px}
 body.folded .edit-post-layout__content{margin-left:57px}
 }@media(min-width:782px) and (min-width:960px){body.auto-fold .edit-post-layout__content{margin-left:220px}
 }@media(min-width:960px){.auto-fold .edit-post-header{left:220px}
+}@media only screen and (min-width:960px){.wrap{margin:55px 35px 0 2px}
 }@media only screen and (max-width:960px){.auto-fold #adminmenuback,.auto-fold #adminmenuwrap,.auto-fold #adminmenu,.auto-fold #adminmenu li.menu-top{width:57px}
 .auto-fold #adminmenu .wp-submenu.sub-open,.auto-fold #adminmenu .opensub .wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,.auto-fold #adminmenu .wp-has-current-submenu.opensub .wp-submenu,.auto-fold #adminmenu a.menu-top:focus+.wp-submenu,.auto-fold #adminmenu .wp-has-current-submenu a.menu-top:focus+.wp-submenu{left:57px;border:1px solid lightgray}
 .auto-fold #adminmenuwrap ul#adminmenu{padding-left:10px}

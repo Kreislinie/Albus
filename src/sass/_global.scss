@@ -33,8 +33,11 @@ html.wp-toolbar {
 
 }
 
-.wrap {
-  margin: 55px $content-margin 0 2px;
+
+@media only screen and (min-width: 960px) {
+	.wrap {
+ 		margin: 55px $content-margin 0 2px;
+	}
 }
 
 #screen-meta-links {
