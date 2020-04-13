@@ -87,11 +87,19 @@ div#wp-responsive-toggle a:before{color:#595959}
 .mce-container.mce-menu .mce-menu-item:hover,.mce-container.mce-menu .mce-menu-item.mce-selected,.mce-container.mce-menu .mce-menu-item:focus,.mce-container.mce-menu .mce-menu-item-normal.mce-active,.mce-container.mce-menu .mce-menu-item-preview.mce-active{background:#0089ac}
 .wp-core-ui .button,.wp-core-ui .button-primary,.wp-core-ui .button-secondary{height:45px;border:0;-webkit-box-shadow:none;box-shadow:none;text-shadow:none;background:#e4e6e6;color:#414141;padding:0 18px 1px;margin-right:5px;line-height:40px}
 .wp-core-ui .button:hover,.wp-core-ui .button-primary:hover,.wp-core-ui .button-secondary:hover{background:#0089ac;color:white}
+.wp-core-ui .button.active,.wp-core-ui .button.active:hover{background:#0089ac;color:white}
+.wp-core-ui a.button{line-height:44px}
 .tablenav .tablenav-pages .button,.tablenav .tablenav-pages .tablenav-pages-navspan{line-height:40px}
 .tablenav.top{padding-top:14px}
 .wp-core-ui .button.button-primary.button-hero{-webkit-box-shadow:none;box-shadow:none}
+.wp-core-ui .button-group.button-small .button,.wp-core-ui .button.button-small{height:9px}
 .wrap .page-title-action{background:#0089ac;border:0;border-radius:5px;color:white}
 .wrap .page-title-action:hover{background:#0089ac;color:white}
+#dashboard_right_now #wp-version-message .button{top:-29px}
+.wp-core-ui .welcome-panel .button-primary.button-hero{line-height:23px;-webkit-box-shadow:none !important;box-shadow:none !important}
+#customize-save-button-wrapper .save{height:0;line-height:0}
+#publish-settings{height:0}
+.preview-link-wrapper .customize-copy-preview-link.preview-control-element.button{height:0;line-height:0;-webkit-transform:translateY(2px);transform:translateY(2px)}
 #adminmenu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 #adminmenuback{border-right:1px solid lightgray;background:white;-webkit-box-shadow:0 0 10px -5px rgba(0,0,0,0.33);box-shadow:0 0 10px -5px rgba(0,0,0,0.33)}
 #adminmenu .wp-submenu{top:-1000em;left:205px}
@@ -121,7 +129,6 @@ html #wpadminbar li a{line-height:50px}
 #wpadminbar .ab-icon,#wpadminbar .ab-item:before,#wpadminbar>#wp-toolbar>#wp-admin-bar-root-default .ab-icon,.wp-admin-bar-arrow{padding-top:12.5px}
 #wpadminbar .menupop .ab-sub-wrapper,#wpadminbar .shortlink-input{border:1px solid lightgray}
 #wp-admin-bar-user-info .avatar{left:-79px;top:9px}
-#wpadminbar #wp-admin-bar-my-account.with-avatar #wp-admin-bar-user-actions>li{margin-left:104px}
 .wp-admin input[type="text"],.wp-admin input[type="password"],.wp-admin input[type="color"],.wp-admin input[type="date"],.wp-admin input[type="datetime"],.wp-admin input[type="datetime-local"],.wp-admin input[type="email"],.wp-admin input[type="month"],.wp-admin input[type="number"],.wp-admin input[type="search"],.wp-admin input[type="tel"],.wp-admin input[type="text"],.wp-admin input[type="time"],.wp-admin input[type="url"],.wp-admin input[type="week"],.wp-admin select,.wp-admin textarea,.wp-admin #titlediv #title{background-color:#f7f7f7;border-top-left-radius:5px;border-top-right-radius:5px;border-top:transparent;border-right:transparent;border-left:transparent;border-bottom:2px solid lightgray;-webkit-box-shadow:none;box-shadow:none;color:#32373c;outline:0;padding:13px}
 .wp-admin input[type="text"]:focus,.wp-admin input[type="password"]:focus,.wp-admin input[type="color"]:focus,.wp-admin input[type="date"]:focus,.wp-admin input[type="datetime"]:focus,.wp-admin input[type="datetime-local"]:focus,.wp-admin input[type="email"]:focus,.wp-admin input[type="month"]:focus,.wp-admin input[type="number"]:focus,.wp-admin input[type="search"]:focus,.wp-admin input[type="tel"]:focus,.wp-admin input[type="text"]:focus,.wp-admin input[type="time"]:focus,.wp-admin input[type="url"]:focus,.wp-admin input[type="week"]:focus,.wp-admin select:focus,.wp-admin textarea:focus,.wp-admin #titlediv #title:focus{outline:0;border-bottom:2px solid #0089ac;border:transparent;border-bottom:2px solid #0089ac;-webkit-box-shadow:none;box-shadow:none}
 .wp-admin input[type="text"],.wp-admin input[type="password"],.wp-admin input[type="color"],.wp-admin input[type="date"],.wp-admin input[type="datetime"],.wp-admin input[type="datetime-local"],.wp-admin input[type="email"],.wp-admin input[type="month"],.wp-admin input[type="number"],.wp-admin input[type="search"],.wp-admin input[type="tel"],.wp-admin input[type="text"],.wp-admin input[type="time"],.wp-admin input[type="url"],.wp-admin input[type="week"]{height:45px}
@@ -169,8 +176,9 @@ html.wp-toolbar{padding-top:50px}
 #wpcontent,#wpfooter{margin-left:220px;padding-left:35px}
 .folded #wpcontent,.folded #wpfooter{margin-left:57px}
 #screen-meta-links{margin-right:35px}
-.notice-error,div.error,div.updated{border-top:1px solid lightgray;border-right:1px solid lightgray;border-bottom:1px solid lightgray;-webkit-box-shadow:none;box-shadow:none}
-@media(min-width:782px){.edit-post-header{left:220px}
+.notice-error,div.error,div.updated,.update-nag,#update-nag{border-top:1px solid lightgray;border-right:1px solid lightgray;border-bottom:1px solid lightgray;-webkit-box-shadow:none;box-shadow:none}
+@media screen and (min-width:782px){#wpadminbar #wp-admin-bar-my-account.with-avatar #wp-admin-bar-user-actions>li{margin-left:104px}
+}@media(min-width:782px){.edit-post-header{left:220px}
 .auto-fold .edit-post-header{left:57px}
 .folded .edit-post-header{left:57px}
 body .edit-post-layout__content{top:106px}
