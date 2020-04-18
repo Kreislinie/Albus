@@ -17,6 +17,12 @@ html.wp-toolbar {
   margin-left: $admin-menu-width;
   padding-left: $content-margin;
 }
+/* 
+// Change background color.
+#wpwrap {
+  background: $color-wpcontent;
+}
+*/
 
 // Adapt margin to folded admin menu.
 .folded #wpcontent,

@@ -6,8 +6,7 @@
 table.wp-list-table.widefat {
   margin: 20px 0px;
   border: none;
-border: $default-border;
-
+  border: $default-border;
 }
 
 // table rows padding
@@ -20,16 +19,16 @@ border: $default-border;
   padding: 18px 10px;
 }
 
+/*
 .striped>tbody>:nth-child(n), ul.striped>:nth-child(n) {
   // reset background from every 2nd row
   background: inherit;
   
   // hover row styling
-  &:hover {
-    background: white;
-  }
+  &:hover { background: white; }
 
 }
+*/
 
 // row border
 td, .check-column {

@@ -19,6 +19,7 @@ $base-color: rgb(255, 255, 255);
 $icon-color: darken( $base-color, 65% );
 $highlight-color: rgb(0, 137, 172);
 $notification-color: rgb(213, 78, 33);
+$color-wpcontent: hsl(0, 0%, 94%);
 
 // mesurement
 $admin-menu-width: 220px;
@@ -31,7 +32,7 @@ $admin-bar-height: 50px;
 $body-background: rgb(245, 245, 245);
 $link: darken( $base-color, 80% );
 $link-focus: rgb(0, 137, 172);
-$button-color: rgb(228, 230, 230);
+$button-color: rgb(241, 241, 241);
 $form-checked: $link-focus;
 
 
