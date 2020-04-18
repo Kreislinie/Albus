@@ -18,24 +18,26 @@
   select,
   textarea,
   #titlediv #title { 
-    background-color: darken($base-color, 3%);
-    border-top-left-radius: $default-border-radius;
-    border-top-right-radius: $default-border-radius;
-    border-top: transparent;
-    border-right: transparent;
-    border-left: transparent;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid $default-border-color;
     border-bottom: 2px solid $default-border-color;
     box-shadow: none;
     color: #32373c;
     outline: none; 
     padding: 13px; 
 
+
+  &:hover {
+    border-bottom: 2px solid $link-focus;
+  }
+
     &:focus {
       outline: none;
+      border: 1px solid $default-border-color;
       border-bottom: 2px solid $link-focus;
-      border: transparent;
-      border-bottom: 2px solid $link-focus;
-      box-shadow: none;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+
     }
 
   }
@@ -101,16 +103,18 @@ input[type="url"],
 textarea {
 
   &:focus {
-    border-top: transparent;
-    border-right: transparent;
-    border-left: transparent;
+    
+    
     border-bottom: 2px solid $link-focus;
     box-shadow: none;
-    background-color: darken($base-color, 6%);
+    background-color: white;
+
+    
+
   }
 
   &:hover {
-    background-color: darken($base-color, 5%);
+    background-color: white;
   }
 
 }

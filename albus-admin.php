@@ -2,10 +2,10 @@
 /*
 Plugin Name:  Albus Admin 
 Plugin URI:   https://github.com/Kreislinie/albus-admin 
-Description:  Light WordPress backend theme. 
-Version:      v0.1.3 
+Description:  Clean WordPress backend theme. 
+Version:      v0.1.4 
 Author:       Kreislinie - Simon Mettler 
-Author URI:   kreislinie.com 
+Author URI:   https://kreislinie.com 
 License:      GPLv3 
 License URI:  https://www.gnu.org/licenses/gpl-3.0.html 
 Text Domain:  albus-admin
@@ -20,10 +20,10 @@ if ( ! defined( 'ABSPATH' ) )
 
 function load_custom_wp_admin_style() {
 
-  wp_register_style( 'albus_style', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '0.1.3' );
+  wp_register_style( 'albus_style', plugin_dir_url( __FILE__ ) . 'albus-style.css', false, '0.1.4' );
   wp_enqueue_style( 'albus_style' );
 
-  wp_enqueue_script('albus_script', plugin_dir_url( __FILE__ ) . 'js/custom.min.js', [], '0.1.3', true);
+  wp_enqueue_script('albus_script', plugin_dir_url( __FILE__ ) . 'js/custom.min.js', [], '0.1.4', true);
 
   // WordPress media library
   wp_enqueue_media();

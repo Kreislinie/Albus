@@ -3,12 +3,17 @@ Donate link: http://example.com/
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Albus Admin is a light and clean WordPress backend theme.
+Albus Admin is a clean WordPress backend theme.
 
 == Changelog ==
 
+= v0.1.4 =
+* Somewhat stable desktop release...
+* Change button styling
+* Adapt to new Gutenberg classes
+
 = v0.1.3 =
-* Gutenber Editor styling
+* Gutenberg Editor styling
 * fix checkbox appearance
 
 = v0.1.2 =

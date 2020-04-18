@@ -42,6 +42,13 @@
   border: $default-border;
 }
 
+@media screen and (max-width: 782px) {
+	#adminmenu .wp-not-current-submenu .wp-submenu, 
+	.folded #adminmenu .wp-has-current-submenu .wp-submenu {
+		border: none;
+	}
+}
+
 // Admin menu width.
 #adminmenuback,
 #adminmenuwrap,
@@ -66,7 +73,11 @@
   .auto-fold #adminmenu, 
   .auto-fold #adminmenuback, 
   .auto-fold #adminmenuwrap {
-    z-index: -100;
+    z-index: 1;
+  }
+  
+  .wp-submenu .wp-submenu-wrap {
+    border: none;
   }
 
 }
@@ -89,6 +100,11 @@
 	.auto-fold #adminmenu .wp-has-current-submenu a.menu-top:focus + .wp-submenu {
     left: $admin-menu-collapse-width;
     border: $default-border;
+
+		@media screen and (max-width: 783px) {
+			left: -1px;
+			border: none;
+		}
 
   }
   
@@ -290,6 +306,8 @@ html #wpadminbar {
   top: 9px;
 }
 
-#wpadminbar #wp-admin-bar-my-account.with-avatar #wp-admin-bar-user-actions>li {
-  margin-left: 104px;
+@media screen and (min-width: 782px) {
+	#wpadminbar #wp-admin-bar-my-account.with-avatar #wp-admin-bar-user-actions>li {
+		margin-left: 104px;
+	}
 }

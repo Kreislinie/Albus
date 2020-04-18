@@ -17,6 +17,12 @@ html.wp-toolbar {
   margin-left: $admin-menu-width;
   padding-left: $content-margin;
 }
+/* 
+// Change background color.
+#wpwrap {
+  background: $color-wpcontent;
+}
+*/
 
 // Adapt margin to folded admin menu.
 .folded #wpcontent,
@@ -33,8 +39,11 @@ html.wp-toolbar {
 
 }
 
-.wrap {
-  margin: 55px $content-margin 0 2px;
+
+@media only screen and (min-width: 960px) {
+	.wrap {
+ 		margin: 55px $content-margin 0 2px;
+	}
 }
 
 #screen-meta-links {
@@ -44,7 +53,9 @@ html.wp-toolbar {
 // Error and update messages.
 .notice-error, 
 div.error,
-div.updated {
+div.updated,
+.update-nag,
+#update-nag {
   border-top: $default-border;
   border-right: $default-border;
   border-bottom: $default-border;

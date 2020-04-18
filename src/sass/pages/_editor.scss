@@ -1,39 +1,43 @@
+#editor {
+  background: white;
+}
+
 /* ------------------------------------------------------------
   1.0 - Edit Post Header
 ------------------------------------------------------------ */
-.edit-post-header {
+.block-editor-editor-skeleton {
   top: 51px;
 }
 
 @media (min-width: 782px) {
-  .edit-post-header {
+  .block-editor-editor-skeleton {
     left: $admin-menu-width; 
   } 
 }
 
 /* Auto fold is when on smaller breakpoints, nav menu auto collapses. */
 @media (min-width: 782px) {
-  .auto-fold .edit-post-header {
+  .auto-fold .block-editor-editor-skeleton {
     left: $admin-menu-collapse-width;
   }  
 }  
 
 @media (min-width: 960px) {
-  .auto-fold .edit-post-header {
+  .auto-fold .block-editor-editor-skeleton {
     left: $admin-menu-width;
   } 
 }
 
 /* Sidebar manually collapsed. */
 @media (min-width: 782px) {
-  .folded .edit-post-header {
+  .folded .block-editor-editor-skeleton {
     left: $admin-menu-collapse-width;
   } 
 }
 
 /* Mobile menu opened. */
 @media (max-width: 782px) {
-  .auto-fold .wp-responsive-open .edit-post-header {
+  .auto-fold .wp-responsive-open .block-editor-editor-skeleton {
     left: 190px; 
   }
 }
