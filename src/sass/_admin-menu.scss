@@ -311,3 +311,8 @@ html #wpadminbar {
 		margin-left: 104px;
 	}
 }
+
+// Hide avatar image in admin menu.
+#wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {
+  display: none;
+}
