@@ -1,53 +1,24 @@
 {
-  "name": "your-project",
-  "description": "A WPGulp based project.",
+  "name": "albus-admin",
   "version": "1.0.0",
-  "author": "Author Name (https://twitter.com/MrAhmadAwais/)",
+  "description": "WordPress Backend Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmadawais/WPGulp"
+    "url": "git+https://github.com/Kreislinie/albus-admin.git"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
-    "@babel/register": "^7.8.6",
-    "beepbeep": "^1.3.0",
-    "browser-sync": "^2.26.7",
-    "eslint": "^5.16.0",
-    "eslint-config-wordpress": "^2.0.0",
+  "author": "Kreislinie (Simon Mettler)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Kreislinie/albus-admin/issues"
+  },
+  "homepage": "https://github.com/Kreislinie/albus-admin#readme",
+  "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-cache": "^1.1.3",
-    "gulp-clean": "^0.4.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-filter": "^5.1.0",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-merge-media-queries": "^0.2.1",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-remember": "^1.0.1",
-    "gulp-rename": "^1.2.0",
-    "gulp-rtlcss": "^1.4.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-sort": "^2.0.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
-    "gulp-uglifycss": "^1.0.6",
-    "gulp-wp-pot": "^2.3.6",
-    "gulp-zip": "^4.2.0"
-  },
-  "scripts": {
-    "start": "gulp",
-    "styles": "gulp styles",
-    "stylesRTL": "gulp stylesRTL",
-    "vendorsJS": "gulp vendorsJS",
-    "customJS": "gulp customJS",
-    "images": "gulp images",
-    "clearCache": "gulp clearCache",
-    "translate": "gulp translate"
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
   }
 }
