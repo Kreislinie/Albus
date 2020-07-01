@@ -16,7 +16,7 @@
 
   });
 
-  // The "Remove" button (remove the value from input type='hidden')
+  // "Remove" button (remove the value from input type='hidden')
   $('.remove_image_button').click(function() {
 
     var src = $(this).parent().prev().attr('data-src');

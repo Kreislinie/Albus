@@ -15,3 +15,12 @@ gulp.task('js', function() {
 		.pipe(uglify())
 		.pipe(gulp.dest('js'));
 });
+
+
+gulp.task('watch', function() {
+	gulp.watch('src/js/*.js', gulp.series('js'));
+	gulp.watch('src/sass/**/*.scss', gulp.series('sass'));
+});
+
+
+gulp.task('default', gulp.series('sass', 'js', 'watch'));
