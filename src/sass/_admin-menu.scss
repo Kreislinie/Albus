@@ -312,7 +312,18 @@ html #wpadminbar {
 	}
 }
 
+// Frontend search icon placement.
+#adminbarsearch {
+	margin-top: 8px;
+}
+
 // Hide avatar image in admin menu.
 #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {
   display: none;
 }
+
+// Hide WP-Logo in admin menu.
+#wp-admin-bar-wp-logo {
+	display: none;
+}
+

@@ -261,7 +261,7 @@ ul#adminmenu > li.current > a.current:after {
 #wpadminbar.nojs .ab-top-menu > li.menupop:hover > .ab-item,
 #wpadminbar .ab-top-menu > li.menupop.hover > .ab-item {
 	color: $menu-submenu-focus-text;
-	background: $menu-submenu-background;
+	background: transparent;
 }
 
 #wpadminbar:not(.mobile) > #wp-toolbar li:hover span.ab-label,
