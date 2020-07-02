@@ -1,12 +1,14 @@
 let gulp = require('gulp');
 let sass = require('gulp-sass');
 let uglify = require('gulp-uglify');
-
+let sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function(){
 	return gulp.src('src/sass/albus-style.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass())
-		.pipe(gulp.dest('./'));
+		.pipe(sourcemaps.write('.'))
+		.pipe(gulp.dest('.'));
 });
 
 
