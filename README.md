@@ -1,9 +1,5 @@
 # Albus Admin
 
-
-![Albus Admin](https://static.kreislinie.com/albus-admin/albus_admin-logo-github.gif)
-
-
 __Albus Admin__ is a light and clean WordPress backend theme.
 
 ## Installation
