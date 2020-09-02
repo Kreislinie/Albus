@@ -493,7 +493,8 @@ div#wp-responsive-toggle a:before {
     background: #0089ac;
     color: white; }
 
-#delete-link {
+#delete-link,
+#delete-action {
   line-height: 3.4; }
 
 #dashboard_right_now #wp-version-message .button {
