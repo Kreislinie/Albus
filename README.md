@@ -23,6 +23,7 @@ Development happens on the develop branch, master branch is stable.
 - [npm](https://www.npmjs.com/)
 - [gulp](https://gulpjs.com)
 - [sass](https://sass-lang.com/)
+- [Puc](https://github.com/YahnisElsts/plugin-update-checker)
 
 ## Screenshots :camera:
 ![Albus Admin](https://static.kreislinie.com/albus-admin/screenshot-github-albus-admin.jpg)

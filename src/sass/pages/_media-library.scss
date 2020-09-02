@@ -67,6 +67,17 @@
   background: white;
 }
 
+// Filter Media bar height.
+.attachments-browser .media-toolbar {
+	height: 95px;
+}
+
+.attachments-browser .attachments, 
+.attachments-browser .uploader-inline {
+	top: 95px;
+}
+
+
 /* ------------------------------------------------------------
   2.0 - Attachment Details
 ------------------------------------------------------------ */

@@ -1,11 +1,15 @@
 === Albus Admin ===
-Donate link: http://example.com/
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Albus Admin is a clean WordPress backend theme.
 
 == Changelog ==
+
+= v0.1.6 =
+* Fix media uploader bug
+* update button style
+* update plugin overview layout
 
 = v0.1.5 =
 * Fix frontend admin bar bugs
