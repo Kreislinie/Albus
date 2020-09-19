@@ -1,44 +1,50 @@
-#editor {
-  background: white;
-}
-
 /* ------------------------------------------------------------
   1.0 - Edit Post Header
 ------------------------------------------------------------ */
-.block-editor-editor-skeleton {
+.block-editor-editor-skeleton,
+.interface-interface-skeleton {
   top: 51px;
 }
 
 @media (min-width: 782px) {
-  .block-editor-editor-skeleton {
+  .block-editor-editor-skeleton,
+	.interface-interface-skeleton {
     left: $admin-menu-width; 
   } 
+	.edit-post-layout .editor-post-publish-panel {
+		top: 51px;
+	}
 }
 
 /* Auto fold is when on smaller breakpoints, nav menu auto collapses. */
 @media (min-width: 782px) {
-  .auto-fold .block-editor-editor-skeleton {
+  .auto-fold .block-editor-editor-skeleton,
+	.auto-fold .interface-interface-skeleton {
     left: $admin-menu-collapse-width;
   }  
 }  
 
 @media (min-width: 960px) {
-  .auto-fold .block-editor-editor-skeleton {
+  .auto-fold .block-editor-editor-skeleton,
+	.auto-fold .interface-interface-skeleton {
     left: $admin-menu-width;
   } 
 }
 
 /* Sidebar manually collapsed. */
 @media (min-width: 782px) {
-  .folded .block-editor-editor-skeleton {
+  .folded .block-editor-editor-skeleton,
+	.folded .interface-interface-skeleton {
     left: $admin-menu-collapse-width;
   } 
 }
 
 /* Mobile menu opened. */
 @media (max-width: 782px) {
-  .auto-fold .wp-responsive-open .block-editor-editor-skeleton {
-    left: 190px; 
+  .auto-fold .wp-responsive-open .block-editor-editor-skeleton,
+	.auto-fold .wp-responsive-open .interface-interface-skeleton {
+    left: 0;
+		margin-left: 0;
   }
 }
 
