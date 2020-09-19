@@ -4,8 +4,6 @@ __Albus Admin__ is a light and clean WordPress backend theme.
 
 ## Installation
 
-:warning: Early beta version! Not mobile-ready! :warning:
-
 Download the [latest release](https://github.com/Kreislinie/albus-admin/releases/latest) and upload it to your WordPress installation. Check out the [WordPress-Documentation](https://wordpress.org/support/article/managing-plugins/#manual-upload-via-wordpress-admin) for help.
 
 ## Contributing
@@ -16,7 +14,7 @@ If you found a problem or have a feature request, please open an issue about it.
 
 [Install Node.js + npm](https://nodejs.org/en/download/), clone repo, run `npm install` to download dependencies and `gulp` to start gulp task.
 
-Development happens on the develop branch, master branch is stable.
+Development happens on the develop branch, main branch is stable.
 
 ### Built with
 - [node.js](https://nodejs.org/)
@@ -25,8 +23,8 @@ Development happens on the develop branch, master branch is stable.
 - [sass](https://sass-lang.com/)
 - [Puc](https://github.com/YahnisElsts/plugin-update-checker)
 
-## Screenshots :camera:
-![Albus Admin](https://static.kreislinie.com/albus-admin/screenshot-github-albus-admin.jpg)
+## Screenshots
+[Wiki](https://github.com/Kreislinie/albus-admin/wiki/Screenshots)
 
 ## License
 
