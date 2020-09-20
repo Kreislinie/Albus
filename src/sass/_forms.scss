@@ -1,6 +1,6 @@
 .wp-admin {
 
-  input[type="text"],
+  // input[type="text"],
   input[type="password"],
   input[type="color"],
   input[type="date"],
@@ -11,7 +11,6 @@
   input[type="number"],
   input[type="search"],
   input[type="tel"],
-  input[type="text"],
   input[type="time"],
   input[type="url"],
   input[type="week"],
@@ -53,7 +52,6 @@
   input[type="number"],
   input[type="search"],
   input[type="tel"],
-  input[type="text"],
   input[type="time"],
   input[type="url"],
   input[type="week"] {
@@ -91,26 +89,19 @@ input[type=checkbox]:checked:before {
   background-size: 22px;
 }
 
-
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="number"],
 input[type="search"],
 input[type="tel"],
-input[type="text"],
 input[type="url"],
 textarea {
 
   &:focus {
-    
-    
     border-bottom: 2px solid $link-focus;
     box-shadow: none;
     background-color: white;
-
-    
-
   }
 
   &:hover {
@@ -119,14 +110,17 @@ textarea {
 
 }
 
-
+// Vertical center for tag fields.
+.components-form-token-field__input-container {
+	align-items: center;
+}
 
 
 .form-field label {
   font-size: 1.1em;
 }
 
-// search field
+// Search field
 .search-box input[type="search"] {
   height: $default-button-height;
 }
@@ -150,3 +144,4 @@ input[type=checkbox] {
   }
 
 }
+
