@@ -24,8 +24,8 @@ Development happens on the develop branch, main branch is stable.
 - [Puc](https://github.com/YahnisElsts/plugin-update-checker)
 
 ## Screenshots
-[Wiki](https://github.com/Kreislinie/albus-admin/wiki/Screenshots)
-
+![Albus Admin Screenshot](https://raw.githubusercontent.com/wiki/Kreislinie/albus-admin/images/custom-logo.png)
+[More Screenshots...](https://github.com/Kreislinie/albus-admin/wiki/Screenshots)
 ## License
 
 [GNU General Public License v3.0](https://github.com/Kreislinie/albus-admin/blob/master/LICENSE)
