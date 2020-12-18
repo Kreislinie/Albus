@@ -83,6 +83,15 @@
   body.folded .edit-post-layout__content {
     margin-left: $admin-menu-collapse-width; 
   }
+	
+	.folded .edit-post-layout .components-editor-notices__snackbar {
+    left: 58px;
+	}
+
+	.edit-post-layout .components-editor-notices__snackbar {
+    left: 220px;
+	}
+	
 }
 
 /* ------------------------------------------------------------

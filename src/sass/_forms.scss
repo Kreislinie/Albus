@@ -1,6 +1,6 @@
 .wp-admin {
 
-  input[type="text"],
+  // input[type="text"],
   input[type="password"],
   input[type="color"],
   input[type="date"],
@@ -11,7 +11,6 @@
   input[type="number"],
   input[type="search"],
   input[type="tel"],
-  input[type="text"],
   input[type="time"],
   input[type="url"],
   input[type="week"],
@@ -53,11 +52,11 @@
   input[type="number"],
   input[type="search"],
   input[type="tel"],
-  input[type="text"],
   input[type="time"],
   input[type="url"],
   input[type="week"] {
     height: $default-button-height;
+    border: 1px solid $default-border-color;
   }
 
 }
@@ -91,26 +90,19 @@ input[type=checkbox]:checked:before {
   background-size: 22px;
 }
 
-
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="number"],
 input[type="search"],
 input[type="tel"],
-input[type="text"],
 input[type="url"],
 textarea {
 
   &:focus {
-    
-    
     border-bottom: 2px solid $link-focus;
     box-shadow: none;
     background-color: white;
-
-    
-
   }
 
   &:hover {
@@ -119,23 +111,46 @@ textarea {
 
 }
 
+// Vertical center for tag fields.
+.components-form-token-field__input-container {
+	align-items: center;
+}
 
+// Vertical center label.
+.inline-edit-row fieldset label, 
+.inline-edit-row fieldset span.inline-edit-categories-label,
+.inline-edit-row fieldset label span.title, 
+.inline-edit-row fieldset.inline-edit-date legend,
+.inline-edit-row .inline-edit-or {
+	line-height: 3.9;
+}
 
+.inline-edit-row .inline-edit-or {
+    margin: .2em 12px .2em 0;
+}
 
 .form-field label {
   font-size: 1.1em;
 }
 
-// search field
+// Search field
 .search-box input[type="search"] {
   height: $default-button-height;
 }
 
+// Posts quick edit fields.
+#wpbody-content .quick-edit-row fieldset .inline-edit-group label.alignleft:first-child {
+    margin-right: 1.3em;
+}
+
+ul.cat-checklist {
+	padding: 0 5px 0 17px;
+}
 
 input[type=checkbox] {
   border-radius: 2px;
   border: 2px solid #6c7781;
-  margin-right: 12px;
+  // margin-right: 12px;
   transition: none;
   
   &:checked {
@@ -150,3 +165,4 @@ input[type=checkbox] {
   }
 
 }
+

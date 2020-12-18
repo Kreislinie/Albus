@@ -556,7 +556,7 @@ div#wp-responsive-toggle a:before {
 #adminmenuwrap,
 #adminmenu {
   width: 220px;
-  z-index: 9998; }
+  z-index: 9999; }
 
 #adminmenu div.wp-menu-name {
   width: 205px; }
@@ -669,7 +669,7 @@ html #wpadminbar {
   box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.33);
   left: unset;
   right: 0;
-  z-index: 1; }
+  z-index: 9998; }
   html #wpadminbar li a {
     line-height: 50px; }
   @media only screen and (max-width: 782px) {
@@ -731,7 +731,6 @@ html #wpadminbar {
 #wp-admin-bar-wp-logo {
   display: none; }
 
-.wp-admin input[type="text"],
 .wp-admin input[type="password"],
 .wp-admin input[type="color"],
 .wp-admin input[type="date"],
@@ -742,7 +741,6 @@ html #wpadminbar {
 .wp-admin input[type="number"],
 .wp-admin input[type="search"],
 .wp-admin input[type="tel"],
-.wp-admin input[type="text"],
 .wp-admin input[type="time"],
 .wp-admin input[type="url"],
 .wp-admin input[type="week"],
@@ -757,7 +755,6 @@ html #wpadminbar {
   color: #32373c;
   outline: none;
   padding: 13px; }
-  .wp-admin input[type="text"]:hover,
   .wp-admin input[type="password"]:hover,
   .wp-admin input[type="color"]:hover,
   .wp-admin input[type="date"]:hover,
@@ -768,7 +765,6 @@ html #wpadminbar {
   .wp-admin input[type="number"]:hover,
   .wp-admin input[type="search"]:hover,
   .wp-admin input[type="tel"]:hover,
-  .wp-admin input[type="text"]:hover,
   .wp-admin input[type="time"]:hover,
   .wp-admin input[type="url"]:hover,
   .wp-admin input[type="week"]:hover,
@@ -776,7 +772,6 @@ html #wpadminbar {
   .wp-admin textarea:hover,
   .wp-admin #titlediv #title:hover {
     border-bottom: 2px solid #0089ac; }
-  .wp-admin input[type="text"]:focus,
   .wp-admin input[type="password"]:focus,
   .wp-admin input[type="color"]:focus,
   .wp-admin input[type="date"]:focus,
@@ -787,7 +782,6 @@ html #wpadminbar {
   .wp-admin input[type="number"]:focus,
   .wp-admin input[type="search"]:focus,
   .wp-admin input[type="tel"]:focus,
-  .wp-admin input[type="text"]:focus,
   .wp-admin input[type="time"]:focus,
   .wp-admin input[type="url"]:focus,
   .wp-admin input[type="week"]:focus,
@@ -810,11 +804,11 @@ html #wpadminbar {
 .wp-admin input[type="number"],
 .wp-admin input[type="search"],
 .wp-admin input[type="tel"],
-.wp-admin input[type="text"],
 .wp-admin input[type="time"],
 .wp-admin input[type="url"],
 .wp-admin input[type="week"] {
-  height: 45px; }
+  height: 45px;
+  border: 1px solid lightgray; }
 
 input[type=checkbox]:checked:before {
   color: white;
@@ -843,7 +837,6 @@ input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
-input[type="text"]:focus,
 input[type="url"]:focus,
 textarea:focus {
   border-bottom: 2px solid #0089ac;
@@ -856,10 +849,22 @@ input[type="email"]:hover,
 input[type="number"]:hover,
 input[type="search"]:hover,
 input[type="tel"]:hover,
-input[type="text"]:hover,
 input[type="url"]:hover,
 textarea:hover {
   background-color: white; }
+
+.components-form-token-field__input-container {
+  align-items: center; }
+
+.inline-edit-row fieldset label,
+.inline-edit-row fieldset span.inline-edit-categories-label,
+.inline-edit-row fieldset label span.title,
+.inline-edit-row fieldset.inline-edit-date legend,
+.inline-edit-row .inline-edit-or {
+  line-height: 3.9; }
+
+.inline-edit-row .inline-edit-or {
+  margin: .2em 12px .2em 0; }
 
 .form-field label {
   font-size: 1.1em; }
@@ -867,10 +872,15 @@ textarea:hover {
 .search-box input[type="search"] {
   height: 45px; }
 
+#wpbody-content .quick-edit-row fieldset .inline-edit-group label.alignleft:first-child {
+  margin-right: 1.3em; }
+
+ul.cat-checklist {
+  padding: 0 5px 0 17px; }
+
 input[type=checkbox] {
   border-radius: 2px;
   border: 2px solid #6c7781;
-  margin-right: 12px;
   transition: none; }
   input[type=checkbox]:checked {
     background: #11a0d2;
@@ -1092,7 +1102,11 @@ td, .check-column {
 
 @media (min-width: 782px) {
   body.folded .edit-post-layout__content {
-    margin-left: 57px; } }
+    margin-left: 57px; }
+  .folded .edit-post-layout .components-editor-notices__snackbar {
+    left: 58px; }
+  .edit-post-layout .components-editor-notices__snackbar {
+    left: 220px; } }
 
 /* ------------------------------------------------------------
   3.0 - Metaboxes
