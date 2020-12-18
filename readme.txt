@@ -8,6 +8,10 @@ Albus Admin is a light and clean WordPress backend theme.
 
 = v0.1.6 =
 * Gutenberg Editor styling 
+* Posts and Pages quick edit styling
+
+= v0.1.6 =
+* Gutenberg Editor styling 
 * Fix media uploader bug
 * update button style
 * update plugin overview layout
