@@ -12,7 +12,7 @@ If you found a problem or have a feature request, please open an issue about it.
 
 ## Development
 
-[Install Node.js + npm](https://nodejs.org/en/download/), clone repo, run `npm install` to download dependencies and `gulp` to start gulp task.
+[Install Node.js + npm](https://nodejs.org/en/download/), clone repo, run `npm install` to download dependencies and `gulp` to start gulp tasks.
 
 Development happens on the develop branch, main branch is stable.
 
