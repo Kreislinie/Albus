@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) )
   exit;
   
 /* ------------------------------------------------------------
-  1.0 - Syles and scripts
+  Syles and scripts
 ------------------------------------------------------------ */
 
 function load_custom_wp_admin_style() {
@@ -35,7 +35,7 @@ add_action('admin_bar_init', 'load_custom_wp_admin_style'); // frontend (admin b
 
 
 /* ------------------------------------------------------------
-  2.0 - Footer text
+  Footer text
 ------------------------------------------------------------ */
  
 // New footer text.
@@ -48,7 +48,7 @@ add_filter('admin_footer_text', 'albus_footer_text');
 
 
 /* ------------------------------------------------------------
-  3.0 - Options
+  Options
 ------------------------------------------------------------ */
 
 // Adds option page.
@@ -158,17 +158,18 @@ function albus_options_page() {
 
 
 /* ------------------------------------------------------------
-  4.0 - Custom Logo
+  Custom Logo
 ------------------------------------------------------------ */
 
 // Hooks into admin menu and prints logo.
 function albus_display_custom_logo() {
+
   $albus_options = get_option( 'albus_options' );
 
   if ( !empty( $albus_options['albus_custom_logo'] ) ) {
     
     $custom_logo =  wp_get_attachment_image_src( $albus_options['albus_custom_logo'], 'full' );
-    printf( '<li id="aa-custom-logo"><img src="%s"></li>', $custom_logo[0] );
+    printf( '<li id="aa-custom-logo"><a href="%s"><img src="%s"></a></li>', home_url(), $custom_logo[0] );
 
   }
 
@@ -178,7 +179,7 @@ add_action('adminmenu', 'albus_display_custom_logo');
 
 
 /* ------------------------------------------------------------
-  5.0 - Update functionality
+  Update functionality
 ------------------------------------------------------------ */
 
 require 'vendors/plugin-update-checker/plugin-update-checker.php';
@@ -190,14 +191,23 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 
 
 /* ------------------------------------------------------------
-  6.0 - Disable default gutenberg fullscreen mode 
+  Disable default gutenberg fullscreen mode 
 	https://jeanbaptisteaudras.com/en/2020/03/disable-block-editor-default-fullscreen-mode-in-wordpress-5-4/
 ------------------------------------------------------------ */
 
 function jba_disable_editor_fullscreen_by_default() {
-	$script = "window.onload = function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } }";
+
+	$script = "window.onload = function() { 
+		const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); 
+		if ( isFullscreenMode ) { 
+			wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); 
+		} 
+	}";
+
 	wp_add_inline_script( 'wp-blocks', $script );
+
 }
+
 add_action( 'enqueue_block_editor_assets', 'jba_disable_editor_fullscreen_by_default' );
 
 ?>
