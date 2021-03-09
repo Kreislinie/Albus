@@ -35,19 +35,6 @@ add_action('admin_bar_init', 'load_custom_wp_admin_style'); // frontend (admin b
 
 
 /* ------------------------------------------------------------
-  Footer text
------------------------------------------------------------- */
- 
-// New footer text.
-function albus_footer_text() {
-  return '<a target="_blank" href="https://de.wordpress.com/">WordPress</a> & <a target="_blank" href="https://github.com/Kreislinie/albus-admin">Albus Admin</a>';
-}
-
-// Fired before left side footer text is echoed.
-add_filter('admin_footer_text', 'albus_footer_text');
-
-
-/* ------------------------------------------------------------
   Options
 ------------------------------------------------------------ */
 
