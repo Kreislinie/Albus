@@ -12,6 +12,7 @@
 /* ------------------------------------------------------------
   1.0 - Admin menu (left)
 ------------------------------------------------------------ */
+
 // Necessary to display custom logo.
 #adminmenu {
   display: flex;
@@ -23,6 +24,13 @@
   border-right: $default-border;
   background: $base-color;
   box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.33);
+}
+
+// Remove left border from menu item.
+#adminmenu a:focus, 
+#adminmenu a:hover,
+.folded #adminmenu .wp-submenu-head:hover {
+	box-shadow: none;
 }
 
 // Set position of submenu showed on hover.
@@ -196,7 +204,6 @@
   box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.33);
 }
 
-
 // Open submenu arrow.
 #adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
 	border-right-color: $base-color;
@@ -272,7 +279,6 @@ html #wpadminbar {
   }
   
 }
-
 
 // Sets admin bar item height.
 #wpadminbar .quicklinks .ab-empty-item, 

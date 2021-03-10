@@ -536,6 +536,11 @@ div#wp-responsive-toggle a:before {
   background: white;
   box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.33); }
 
+#adminmenu a:focus,
+#adminmenu a:hover,
+.folded #adminmenu .wp-submenu-head:hover {
+  box-shadow: none; }
+
 #adminmenu .wp-submenu {
   top: -1000em;
   left: 205px; }
